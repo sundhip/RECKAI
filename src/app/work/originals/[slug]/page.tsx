@@ -105,11 +105,12 @@ export default async function OriginalProductDetailPage({ params }: PageProps) {
                 <div className="h-2.5 w-2.5 rounded-full bg-yellow-500/80" />
                 <div className="h-2.5 w-2.5 rounded-full bg-emerald-500/80" />
               </div>
-              <span className="text-[11px] font-mono text-neutral-400">
+              <span className="text-xs font-mono text-neutral-400">
                 {product.slug}.reckai.app // live platform
               </span>
-              <span className="text-[11px] font-mono text-emerald-400 font-semibold">
-                ● Verified Production
+              <span className="text-xs font-mono text-emerald-400 font-semibold flex items-center gap-1">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                Verified Production
               </span>
             </div>
             <div className="aspect-[16/9] w-full overflow-hidden bg-neutral-950">
@@ -132,25 +133,25 @@ export default async function OriginalProductDetailPage({ params }: PageProps) {
       <Container>
         <div className="rounded-3xl border border-neutral-200/80 bg-neutral-50/60 p-8 sm:p-12 dark:border-neutral-800 dark:bg-neutral-900/40">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="space-y-1">
-              <span className="text-[11px] font-mono uppercase text-neutral-400">Category Domain</span>
-              <div className="text-sm font-bold text-neutral-900 dark:text-white">{product.category}</div>
+            <div className="space-y-1.5">
+              <span className="text-xs font-mono uppercase text-neutral-500 dark:text-neutral-400 font-medium">Category Domain</span>
+              <div className="text-base font-bold text-neutral-900 dark:text-white">{product.category}</div>
             </div>
-            <div className="space-y-1">
-              <span className="text-[11px] font-mono uppercase text-neutral-400">Target Cohort</span>
-              <div className="text-sm font-bold text-neutral-900 dark:text-white">
+            <div className="space-y-1.5">
+              <span className="text-xs font-mono uppercase text-neutral-500 dark:text-neutral-400 font-medium">Target Cohort</span>
+              <div className="text-base font-bold text-neutral-900 dark:text-white">
                 {product.problemDeep?.whoExperiencesIt?.split(",")[0] || "Founders & Professionals"}
               </div>
             </div>
-            <div className="space-y-1">
-              <span className="text-[11px] font-mono uppercase text-neutral-400">Engineering State</span>
-              <div className="text-sm font-bold text-emerald-600 dark:text-emerald-400 font-mono">
+            <div className="space-y-1.5">
+              <span className="text-xs font-mono uppercase text-neutral-500 dark:text-neutral-400 font-medium">Engineering State</span>
+              <div className="text-base font-bold text-emerald-600 dark:text-emerald-400 font-mono">
                 {product.currentStage || "Active Development"}
               </div>
             </div>
-            <div className="space-y-1">
-              <span className="text-[11px] font-mono uppercase text-neutral-400">Intelligence Focus</span>
-              <div className="text-sm font-bold text-violet-600 dark:text-violet-400 font-mono">
+            <div className="space-y-1.5">
+              <span className="text-xs font-mono uppercase text-neutral-500 dark:text-neutral-400 font-medium">Intelligence Focus</span>
+              <div className="text-base font-bold text-violet-600 dark:text-violet-400 font-mono">
                 {product.aiCapabilities.length} Applied Systems
               </div>
             </div>

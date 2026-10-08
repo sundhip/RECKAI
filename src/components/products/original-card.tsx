@@ -29,7 +29,7 @@ export function OriginalProductCard({ product, featured = false }: OriginalProdu
             loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
-          <span className="absolute bottom-2.5 right-2.5 rounded-md bg-neutral-950/80 backdrop-blur px-2 py-0.5 text-[10px] font-mono text-white border border-neutral-700/60">
+          <span className="absolute bottom-2.5 right-2.5 rounded-md bg-neutral-950/85 backdrop-blur px-2.5 py-1 text-xs font-mono text-white border border-neutral-700/60 shadow-sm">
             Live Platform
           </span>
         </div>
@@ -37,10 +37,10 @@ export function OriginalProductCard({ product, featured = false }: OriginalProdu
 
       <CardHeader>
         <div className="flex items-center justify-between gap-2 flex-wrap">
-          <Badge variant="violet" className="font-mono text-[10px] tracking-widest font-bold">
+          <Badge variant="violet" className="font-mono text-xs tracking-wider font-bold px-2.5 py-0.5">
             RECKAI ORIGINAL
           </Badge>
-          <span className="text-xs font-mono text-neutral-500 uppercase tracking-wider">
+          <span className="text-xs sm:text-sm font-mono text-neutral-500 uppercase tracking-wider font-medium">
             {product.category}
           </span>
         </div>
@@ -49,7 +49,7 @@ export function OriginalProductCard({ product, featured = false }: OriginalProdu
           {product.name}
         </CardTitle>
 
-        <CardDescription className="text-sm sm:text-base mt-2 line-clamp-3">
+        <CardDescription className="text-sm sm:text-base mt-2 line-clamp-3 leading-relaxed">
           {product.shortDescription}
         </CardDescription>
       </CardHeader>
@@ -57,7 +57,7 @@ export function OriginalProductCard({ product, featured = false }: OriginalProdu
       <CardContent className="space-y-4">
         {/* Capability Tags */}
         <div className="space-y-1.5">
-          <div className="text-[11px] font-mono uppercase tracking-wider text-neutral-500">
+          <div className="text-xs font-mono uppercase tracking-wider text-neutral-500 font-semibold">
             Intelligence
           </div>
           <div className="flex flex-wrap gap-1.5">
@@ -73,11 +73,11 @@ export function OriginalProductCard({ product, featured = false }: OriginalProdu
         </div>
 
         {/* Technical Stack */}
-        <div className="flex flex-wrap gap-1 pt-1">
+        <div className="flex flex-wrap gap-1.5 pt-1">
           {product.technologies.slice(0, 3).map((tech) => (
             <span
               key={tech}
-              className="text-[11px] font-mono text-neutral-500 dark:text-neutral-400 mr-2"
+              className="text-xs font-mono text-neutral-500 dark:text-neutral-400 mr-2"
             >
               #{tech}
             </span>
@@ -87,7 +87,7 @@ export function OriginalProductCard({ product, featured = false }: OriginalProdu
 
       <CardFooter>
         <Link href={`/work/originals/${product.slug}`} className="w-full">
-          <Button variant="outline" size="sm" arrow="right" className="w-full justify-between">
+          <Button variant="outline" size="md" arrow="right" className="w-full justify-between">
             <span>Explore Product Architecture</span>
           </Button>
         </Link>

@@ -214,12 +214,14 @@ export function Hero() {
           {/* Workstation Container */}
           <div className="rounded-3xl border border-neutral-200/90 bg-white/95 p-3 sm:p-5 shadow-floating backdrop-blur-md dark:border-neutral-800 dark:bg-[#111116]/95">
             {/* Window Chrome Header */}
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-3 px-2 border-b border-neutral-200/80 dark:border-neutral-800 gap-3">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-3.5 px-3 border-b border-neutral-200/80 dark:border-neutral-800 gap-3">
               <div className="flex items-center gap-2">
-                <div className="h-3 w-3 rounded-full bg-red-400" />
-                <div className="h-3 w-3 rounded-full bg-amber-400" />
-                <div className="h-3 w-3 rounded-full bg-emerald-400" />
-                <span className="ml-3 text-xs font-mono text-neutral-500 hidden sm:inline">
+                <div className="flex items-center gap-1.5">
+                  <div className="h-3 w-3 rounded-full bg-red-400" />
+                  <div className="h-3 w-3 rounded-full bg-amber-400" />
+                  <div className="h-3 w-3 rounded-full bg-emerald-400" />
+                </div>
+                <span className="ml-3 text-xs sm:text-sm font-mono text-neutral-500 hidden sm:inline">
                   reckai-platform // {activeTab}.reckai.app
                 </span>
               </div>
@@ -238,7 +240,7 @@ export function Hero() {
                     key={tab.id}
                     type="button"
                     onClick={() => setActiveTab(tab.id)}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+                    className={`px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all ${
                       activeTab === tab.id
                         ? "bg-white text-violet-700 shadow-sm dark:bg-neutral-800 dark:text-violet-300 font-bold"
                         : "text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white"
@@ -252,29 +254,32 @@ export function Hero() {
 
             {/* Inner Project Viewport */}
             <div className="relative mt-4 rounded-2xl bg-[#FBFBFD] p-5 sm:p-8 border border-neutral-200/80 dark:bg-[#0A0A0C] dark:border-neutral-800 space-y-6">
-              {/* Product Meta Header */}
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-neutral-200/80 dark:border-neutral-800 pb-5">
-                <div>
-                  <div className="flex items-center gap-2 flex-wrap">
-                    <Badge variant="violet" className="text-[10px] font-mono font-bold tracking-wider">
-                      {current.badge}
-                    </Badge>
-                    <span className="text-xs font-mono text-neutral-500">
-                      {current.category}
-                    </span>
-                  </div>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-slate-950 dark:text-white mt-1.5">
-                    {current.name}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 dark:text-neutral-400 mt-0.5">
-                    {current.tagline}
-                  </p>
+              {/* Product Meta Header with Proper Alignment */}
+              <div className="border-b border-neutral-200/80 dark:border-neutral-800 pb-5 space-y-3">
+                <div className="flex items-center gap-2.5 flex-wrap">
+                  <Badge variant="violet" className="text-xs font-mono font-bold tracking-wider px-2.5 py-0.5">
+                    {current.badge}
+                  </Badge>
+                  <span className="text-xs sm:text-sm font-mono text-neutral-500 dark:text-neutral-400 font-medium">
+                    {current.category}
+                  </span>
                 </div>
-                <Link href={`/work/originals/${current.slug}`}>
-                  <Button variant="outline" size="sm" arrow="right">
-                    View Full Case Study
-                  </Button>
-                </Link>
+
+                <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+                  <div>
+                    <h3 className="text-3xl sm:text-4xl font-extrabold text-slate-950 dark:text-white tracking-tight">
+                      {current.name}
+                    </h3>
+                    <p className="text-sm sm:text-base text-slate-600 dark:text-neutral-300 mt-1 font-medium">
+                      {current.tagline}
+                    </p>
+                  </div>
+                  <Link href={`/work/originals/${current.slug}`} className="shrink-0 self-start sm:self-end">
+                    <Button variant="outline" size="md" arrow="right">
+                      View Full Case Study
+                    </Button>
+                  </Link>
+                </div>
               </div>
 
               {/* Real Project Screenshot Feature Mockup */}
@@ -287,12 +292,13 @@ export function Hero() {
                   />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
-                <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-xs text-white">
-                  <span className="font-mono text-[11px] bg-neutral-950/80 backdrop-blur px-2.5 py-1 rounded border border-neutral-700/60">
+                <div className="absolute bottom-3.5 left-4 right-4 flex items-center justify-between text-white">
+                  <span className="font-mono text-xs bg-neutral-950/85 backdrop-blur-md px-3 py-1.5 rounded-lg border border-neutral-700/70 shadow-sm">
                     Active Production Interface
                   </span>
-                  <span className="text-[11px] font-mono text-emerald-400 font-semibold bg-emerald-950/80 backdrop-blur px-2.5 py-1 rounded border border-emerald-800/60">
-                    ● System Online
+                  <span className="text-xs font-mono text-emerald-400 font-semibold bg-emerald-950/85 backdrop-blur-md px-3 py-1.5 rounded-lg border border-emerald-800/70 shadow-sm flex items-center gap-1.5">
+                    <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+                    System Online
                   </span>
                 </div>
               </div>
@@ -302,18 +308,20 @@ export function Hero() {
                 {current.features.map((feat, idx) => (
                   <div
                     key={idx}
-                    className="rounded-xl border border-neutral-200/80 bg-white p-4.5 shadow-sm dark:border-neutral-800 dark:bg-neutral-900/70 space-y-1.5"
+                    className="flex flex-col justify-between rounded-xl border border-neutral-200/80 bg-white p-5 shadow-sm dark:border-neutral-800 dark:bg-neutral-900/70"
                   >
-                    <div className="text-[10px] font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
-                      {feat.subtitle}
+                    <div className="space-y-2">
+                      <div className="text-xs font-mono font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
+                        {feat.subtitle}
+                      </div>
+                      <div className="text-lg font-bold text-slate-900 dark:text-white">
+                        {feat.title}
+                      </div>
+                      <p className="text-sm text-slate-600 dark:text-neutral-300 leading-relaxed">
+                        {feat.desc}
+                      </p>
                     </div>
-                    <div className="text-base font-bold text-slate-900 dark:text-white">
-                      {feat.title}
-                    </div>
-                    <p className="text-xs text-slate-600 dark:text-neutral-400 leading-relaxed">
-                      {feat.desc}
-                    </p>
-                    <div className="pt-2 text-[10px] font-mono text-violet-600 dark:text-violet-400 font-medium">
+                    <div className="pt-4 mt-4 border-t border-neutral-100 dark:border-neutral-800/60 text-xs font-mono text-violet-600 dark:text-violet-400 font-semibold">
                       {feat.meta}
                     </div>
                   </div>
@@ -321,9 +329,9 @@ export function Hero() {
               </div>
 
               {/* Bottom Runtime Meta */}
-              <div className="pt-3 border-t border-neutral-200/80 dark:border-neutral-800 flex items-center justify-between text-[11px] font-mono text-neutral-500 dark:text-neutral-400">
+              <div className="pt-4 border-t border-neutral-200/80 dark:border-neutral-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs sm:text-sm font-mono text-neutral-600 dark:text-neutral-400">
                 <span>Verified RECKAI Production Deployment</span>
-                <span className="text-violet-600 dark:text-violet-400 font-medium">
+                <span className="text-violet-600 dark:text-violet-400 font-semibold">
                   {current.name} — High Performance System
                 </span>
               </div>

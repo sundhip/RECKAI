@@ -94,17 +94,18 @@ export function OriginalsPreview({ originals }: { originals: OriginalProduct[] }
                 <div className="lg:col-span-5 relative group">
                   <div className="overflow-hidden rounded-2xl border border-neutral-200/90 bg-neutral-950 shadow-floating dark:border-neutral-800 transition-all duration-300">
                     {/* Window Chrome Header */}
-                    <div className="flex items-center justify-between border-b border-neutral-800/80 bg-neutral-900/90 px-3.5 py-2">
+                    <div className="flex items-center justify-between border-b border-neutral-800/80 bg-neutral-900/90 px-3.5 py-2.5">
                       <div className="flex items-center gap-1.5">
                         <div className="h-2.5 w-2.5 rounded-full bg-red-500/80" />
                         <div className="h-2.5 w-2.5 rounded-full bg-yellow-500/80" />
                         <div className="h-2.5 w-2.5 rounded-full bg-emerald-500/80" />
                       </div>
-                      <span className="text-[10px] font-mono text-neutral-400">
+                      <span className="text-xs font-mono text-neutral-400">
                         {featured.slug}.reckai.app // live
                       </span>
-                      <span className="text-[10px] font-mono text-emerald-400 font-semibold">
-                        ● OPERATIONAL
+                      <span className="text-xs font-mono text-emerald-400 font-semibold flex items-center gap-1">
+                        <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                        OPERATIONAL
                       </span>
                     </div>
 
@@ -116,9 +117,9 @@ export function OriginalsPreview({ originals }: { originals: OriginalProduct[] }
                         className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
-                      <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-white">
+                      <div className="absolute bottom-3.5 left-3.5 right-3.5 flex items-center justify-between text-xs sm:text-sm text-white">
                         <span className="font-semibold drop-shadow">{featured.name}</span>
-                        <span className="text-[10px] font-mono bg-violet-600/90 px-2 py-0.5 rounded backdrop-blur">
+                        <span className="text-xs font-mono bg-violet-600/90 px-2.5 py-1 rounded-md backdrop-blur shadow-sm">
                           Active System
                         </span>
                       </div>
