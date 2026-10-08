@@ -13,13 +13,13 @@ export function Card({
 }: CardProps) {
   const variantStyles = {
     default:
-      "bg-white/95 border border-slate-200/90 shadow-[0_4px_24px_-2px_rgba(99,102,241,0.06),0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_36px_-4px_rgba(99,102,241,0.12)] hover:border-violet-300/80 dark:bg-reckai-dark-surface dark:border-neutral-800/90 dark:hover:border-neutral-700 dark:shadow-none",
+      "bg-white/90 border border-neutral-200/90 shadow-subtle hover:shadow-medium hover:border-neutral-300 dark:bg-reckai-dark-surface dark:border-neutral-800/90 dark:hover:border-neutral-700",
     subtle:
-      "bg-gradient-to-b from-white/90 to-slate-50/70 border border-slate-200/80 hover:bg-white hover:border-violet-300/60 shadow-xs dark:bg-neutral-900/50 dark:border-neutral-800 dark:hover:bg-neutral-900 dark:shadow-none",
+      "bg-neutral-50/70 border border-neutral-200/60 hover:bg-white hover:border-neutral-300 dark:bg-neutral-900/50 dark:border-neutral-800 dark:hover:bg-neutral-900",
     dark:
-      "bg-neutral-950 text-white border border-neutral-800 shadow-xl hover:border-neutral-700",
+      "bg-neutral-950 text-white border border-neutral-850 shadow-subtle hover:border-neutral-700",
     outline:
-      "bg-transparent border border-slate-200/90 hover:border-violet-400/60 dark:border-neutral-800 dark:hover:border-neutral-700",
+      "bg-transparent border border-neutral-200 hover:border-violet-500/50 dark:border-neutral-800 dark:hover:border-violet-400/50",
   };
 
   return (

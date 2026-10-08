@@ -4,13 +4,13 @@ import { PRIMARY_CTA, SECONDARY_CTA } from "@/data/navigation/nav-links";
 
 export function Footer() {
   return (
-    <footer className="border-t border-slate-200/80 bg-gradient-to-b from-slate-50/70 to-slate-100/60 py-16 dark:border-neutral-800/80 dark:bg-reckai-dark relative">
+    <footer className="border-t border-neutral-200/80 bg-neutral-50/50 py-16 dark:border-neutral-800/80 dark:bg-reckai-dark">
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 pb-12 border-b border-slate-200/80 dark:border-neutral-800/60">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 pb-12 border-b border-neutral-200/60 dark:border-neutral-800/60">
           {/* Brand Col */}
           <div className="md:col-span-1 space-y-4">
             <Link href="/" className="inline-block">
-              <span className="text-xl font-extrabold tracking-tightest text-slate-950 dark:text-white">
+              <span className="text-xl font-bold tracking-tightest text-neutral-950 dark:text-white">
                 RECK<span className="text-violet-600">AI</span>
               </span>
             </Link>

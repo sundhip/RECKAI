@@ -48,16 +48,15 @@ export function ProcessPreview() {
   ];
 
   return (
-    <section className="py-20 sm:py-28 border-t border-slate-200/80 bg-gradient-to-b from-slate-50/50 via-white to-slate-50/50 dark:border-neutral-800/80 dark:bg-reckai-dark-surface/40 relative">
-      <div className="absolute inset-0 bg-subtle-grid pointer-events-none opacity-40 dark:opacity-15" />
-      <Container className="space-y-16 relative">
+    <section className="py-20 sm:py-28 border-t border-neutral-200/80 bg-neutral-50/50 dark:border-neutral-800/80 dark:bg-reckai-dark-surface/40">
+      <Container className="space-y-16">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-3 max-w-2xl">
             <Badge variant="violet">METHODOLOGY</Badge>
-            <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-slate-950 dark:text-white leading-[1.1]">
+            <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-neutral-950 dark:text-white leading-[1.1]">
               We reckon before we build.
             </h2>
-            <p className="text-base sm:text-lg text-slate-600 dark:text-neutral-400">
+            <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400">
               Good products start with understanding the problem. Deliberate thinking prevents building software nobody needs.
             </p>
           </div>
@@ -78,27 +77,27 @@ export function ProcessPreview() {
               key={st.step}
               className={`rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between ${
                 st.highlight
-                  ? "border border-violet-500/80 bg-gradient-to-b from-violet-50/80 to-purple-50/40 dark:bg-violet-950/40 dark:border-violet-600 shadow-[0_8px_30px_rgba(124,58,237,0.12)] dark:shadow-none"
-                  : "border border-slate-200/90 bg-white/95 shadow-2xs hover:border-violet-300 dark:border-neutral-800 dark:bg-reckai-dark-surface hover:shadow-md"
+                  ? "border-2 border-violet-500 bg-violet-50/60 dark:bg-violet-950/30 dark:border-violet-600 shadow-violet-glow"
+                  : "border border-neutral-200/80 bg-white dark:border-neutral-800 dark:bg-reckai-dark"
               }`}
             >
               <div>
-                <div className="flex items-center justify-between text-xs sm:text-sm font-mono font-bold">
-                  <span className={st.highlight ? "text-violet-600 dark:text-violet-400" : "text-slate-500 dark:text-neutral-400"}>
+                <div className="flex items-center justify-between text-xs font-mono font-bold">
+                  <span className={st.highlight ? "text-violet-600 dark:text-violet-400" : "text-neutral-400"}>
                     {st.step}
                   </span>
                   {st.highlight && (
-                    <Badge variant="violet" className="text-xs uppercase font-bold">
+                    <Badge variant="violet" className="text-[10px] uppercase">
                       Core Ethos
                     </Badge>
                   )}
                 </div>
 
-                <h3 className="text-xl sm:text-2xl font-bold text-slate-950 dark:text-white mt-4">
+                <h3 className="text-xl font-bold text-neutral-950 dark:text-white mt-4">
                   {st.title}
                 </h3>
 
-                <p className="text-sm sm:text-[15px] text-slate-700 dark:text-neutral-200 mt-2.5 leading-relaxed font-normal">
+                <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mt-2 leading-relaxed">
                   {st.desc}
                 </p>
               </div>

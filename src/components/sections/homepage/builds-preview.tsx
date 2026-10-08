@@ -18,42 +18,41 @@ export function BuildsPreview() {
   ];
 
   return (
-    <section className="py-20 sm:py-28 border-y border-slate-200/80 bg-gradient-to-b from-slate-50/50 via-white to-slate-50/50 dark:border-neutral-800/80 dark:bg-reckai-dark-surface/40 relative">
-      <div className="absolute inset-0 bg-subtle-grid pointer-events-none opacity-40 dark:opacity-15" />
-      <Container className="space-y-16 relative">
+    <section className="py-20 sm:py-28 border-y border-neutral-200/80 bg-neutral-50/50 dark:border-neutral-800/80 dark:bg-reckai-dark-surface/40">
+      <Container className="space-y-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Text Column */}
           <div className="lg:col-span-6 space-y-6">
-            <Badge variant="default" className="font-mono text-xs tracking-widest font-bold">
+            <Badge variant="default" className="font-mono text-[10px] tracking-widest font-bold">
               RECKAI BUILDS
             </Badge>
 
-            <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-slate-950 dark:text-white leading-[1.1]">
+            <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-neutral-950 dark:text-white leading-[1.1]">
               Have an idea worth building?
             </h2>
 
-            <p className="text-base sm:text-lg text-slate-700 dark:text-neutral-200 leading-relaxed font-normal">
+            <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed font-normal">
               Bring us the problem, the idea, or the opportunity. We don&apos;t just write tickets—we partner as a high-velocity product engineering team to turn concepts into real, production-ready software.
             </p>
 
             {/* Transformation Step Flow */}
             <div className="space-y-3 pt-2">
-              <div className="text-xs sm:text-sm font-mono uppercase tracking-wider text-slate-500 dark:text-neutral-400 font-semibold">
+              <div className="text-xs font-mono uppercase tracking-wider text-neutral-500">
                 The Product Transformation Pipeline
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {steps.map((st, idx) => (
                   <div
                     key={st.label}
-                    className="p-3.5 rounded-xl border border-slate-200/90 bg-white/95 shadow-2xs hover:border-violet-300 dark:border-neutral-800 dark:bg-neutral-900/80 transition-colors"
+                    className="p-3 rounded-xl border border-neutral-200/80 bg-white dark:border-neutral-800 dark:bg-reckai-dark"
                   >
-                    <div className="text-xs font-mono text-violet-600 dark:text-violet-400 font-bold">
+                    <div className="text-[10px] font-mono text-violet-600 dark:text-violet-400 font-bold">
                       0{idx + 1}
                     </div>
-                    <div className="text-sm font-bold text-slate-900 dark:text-white mt-1">
+                    <div className="text-xs font-semibold text-neutral-900 dark:text-white mt-0.5">
                       {st.label}
                     </div>
-                    <div className="text-xs sm:text-sm text-slate-600 dark:text-neutral-300 mt-1">{st.desc}</div>
+                    <div className="text-[11px] text-neutral-500 mt-0.5">{st.desc}</div>
                   </div>
                 ))}
               </div>
@@ -78,15 +77,15 @@ export function BuildsPreview() {
 
           {/* Right Column: Technically Credible Transformation Visual */}
           <div className="lg:col-span-6 relative">
-            <div className="rounded-3xl border border-slate-200/90 bg-white/95 p-6 sm:p-8 shadow-[0_12px_40px_rgba(99,102,241,0.08)] dark:border-neutral-800 dark:bg-reckai-dark-surface dark:shadow-none space-y-6">
+            <div className="rounded-3xl border border-neutral-200 bg-white p-6 sm:p-8 shadow-floating dark:border-neutral-800 dark:bg-reckai-dark space-y-6">
               <div className="flex items-center justify-between border-b border-neutral-100 dark:border-neutral-850 pb-4">
                 <div className="flex items-center gap-2">
                   <span className="h-2 w-2 rounded-full bg-violet-600" />
-                  <span className="text-xs sm:text-sm font-mono text-slate-600 dark:text-neutral-400 font-semibold">
+                  <span className="text-xs font-mono text-neutral-500">
                     INTAKE ENGINE // ARCHITECTURE SYNTHESIS
                   </span>
                 </div>
-                <Badge variant="subtle" className="text-xs font-mono font-semibold">
+                <Badge variant="subtle" className="text-[10px]">
                   Bespoke Engineering
                 </Badge>
               </div>

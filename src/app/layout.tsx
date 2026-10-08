@@ -87,10 +87,10 @@ export default function RootLayout({
         <head>
           <ThemeScript />
         </head>
-        <body className={`${sans.variable} ${mono.variable} font-sans min-h-screen flex flex-col bg-[#F8FAFC] text-slate-900 antialiased dark:bg-[#0A0A0C] dark:text-neutral-100 selection:bg-violet-600 selection:text-white transition-colors duration-200 relative`}>
+        <body className={`${sans.variable} ${mono.variable} font-sans min-h-screen flex flex-col bg-[#FBFBFD] text-slate-900 antialiased dark:bg-[#0A0A0C] dark:text-neutral-100 selection:bg-violet-600 selection:text-white transition-colors duration-200`}>
           <ThemeProvider>
             <Header />
-            <main className="flex-1 relative">{children}</main>
+            <main className="flex-1">{children}</main>
             <Footer />
           </ThemeProvider>
         </body>

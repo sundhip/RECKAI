@@ -98,27 +98,25 @@ export default async function OriginalProductDetailPage({ params }: PageProps) {
 
         {/* Real Product Screenshot Showcase */}
         {product.images && product.images[0] && (
-          <div className="overflow-hidden rounded-3xl border border-slate-200/90 bg-slate-950 shadow-xl dark:border-neutral-800">
-            <div className="flex items-center justify-between border-b border-slate-800/80 bg-slate-900/95 px-4 py-3">
-              <div className="flex items-center gap-2">
-                <span className="h-3 w-3 rounded-full bg-[#FF5F56]" />
-                <span className="h-3 w-3 rounded-full bg-[#FFBD2E]" />
-                <span className="h-3 w-3 rounded-full bg-[#27C93F]" />
+          <div className="overflow-hidden rounded-3xl border border-neutral-200/90 bg-neutral-950 shadow-floating dark:border-neutral-800">
+            <div className="flex items-center justify-between border-b border-neutral-800/80 bg-neutral-900/90 px-4 py-2.5">
+              <div className="flex items-center gap-1.5">
+                <div className="h-2.5 w-2.5 rounded-full bg-red-500/80" />
+                <div className="h-2.5 w-2.5 rounded-full bg-yellow-500/80" />
+                <div className="h-2.5 w-2.5 rounded-full bg-emerald-500/80" />
               </div>
-              <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/90 border border-slate-700/80 text-xs sm:text-sm font-mono text-slate-200">
-                <span>🔒</span>
-                <span>https://{product.slug}.reckai.app</span>
-              </div>
-              <span className="text-xs font-mono text-emerald-400 font-bold flex items-center gap-1.5">
-                <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-                Verified Production
+              <span className="text-[11px] font-mono text-neutral-400">
+                {product.slug}.reckai.app // live platform
+              </span>
+              <span className="text-[11px] font-mono text-emerald-400 font-semibold">
+                ● Verified Production
               </span>
             </div>
-            <div className="w-full overflow-hidden bg-slate-950 flex items-center justify-center p-1">
+            <div className="aspect-[16/9] w-full overflow-hidden bg-neutral-950">
               <img
                 src={product.images[0]}
                 alt={`${product.name} application screenshot`}
-                className="w-full h-auto max-h-[620px] object-contain object-top rounded-b-2xl"
+                className="h-full w-full object-cover object-top"
               />
             </div>
           </div>
