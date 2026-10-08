@@ -2,22 +2,22 @@ import { OriginalProduct } from "@/types/product";
 
 export const RECKAI_ORIGINALS: OriginalProduct[] = [
   {
-    id: "original-omnixperience",
-    slug: "omnixperience",
-    name: "OmniXperience",
-    tagline: "A personalized intelligent ecosystem designed around everyday decisions.",
-    category: "Intelligent Personal Ecosystem",
+    id: "original-omnipresence",
+    slug: "omnipresence",
+    name: "OmniPresence",
+    tagline: "Your Everyday Life, Intelligently Unified.",
+    category: "Personal Intelligence Platform",
     type: "ORIGINAL",
     shortDescription:
-      "A proactive, unified personal operating ecosystem integrating wardrobe intelligence, styling, skincare, dynamic scheduling, and personal finance.",
+      "OmniPresence pairs digital wardrobe management, wear analytics, and context-driven outfit planning with OP AI — curating what to wear from your real closet.",
     description:
-      "OmniXperience rethinks personal productivity and lifestyle coordination. Rather than fragmenting daily decisions across dozens of disconnected single-purpose apps, OmniXperience unifies context to proactively manage wardrobe choices, algorithmic skincare regimens, calendar coordination, and financial pacing.",
+      "OmniPresence rethinks personal productivity and lifestyle coordination. Rather than fragmenting daily decisions across disconnected single-purpose apps, OmniPresence unifies digital wardrobe tracking, wear analytics, and context-driven outfit planning with OP AI.",
     problem:
-      "Modern individuals juggle fragmented lifestyle apps for wardrobe, health, schedules, and finance. None of these apps talk to each other, resulting in cognitive overload and reactive, disjointed decision-making.",
+      "Everyday lifestyle decisions—such as wardrobe choices, clothing wear frequency, and outfit planning—are scattered across closets, spreadsheets, and disconnected tools without intelligent coordination.",
     solution:
-      "A unified intelligence ecosystem that synthesizes daily contextual inputs—weather, scheduled commitments, aesthetic preferences, and budget constraints—to provide cohesive, proactive personal recommendations.",
+      "An intelligent lifestyle platform pairing digital wardrobe management, wear analytics, and context-driven outfit planning with OP AI to curate what to wear from your real closet.",
     approach:
-      "Deep contextual reasoning engine combined with multimodal visual analysis for wardrobe classification and deterministic financial safety boundaries.",
+      "Combines computer vision garment attributes, wear telemetry, and occasion-specific contextual matching algorithms.",
     
     problemDeep: {
       friction:
@@ -159,7 +159,7 @@ export const RECKAI_ORIGINALS: OriginalProduct[] = [
       future: ["Fully encrypted on-device inference for complete biometric and personal data privacy"],
     },
 
-    images: ["/products/omnixperience-preview.png"],
+    images: ["/images/projects/omnipresence.png"],
     featured: true,
     status: "PUBLIC",
     createdAt: "2026-01-15T00:00:00Z",
@@ -170,13 +170,13 @@ export const RECKAI_ORIGINALS: OriginalProduct[] = [
     id: "original-evolveaura",
     slug: "evolveaura",
     name: "EvolveAura",
-    tagline: "A productivity and digital wellbeing experience designed around attention and habit mastery.",
+    tagline: "Redirect Your Dopamine. Level Up in Real Life.",
     category: "Cognitive Wellbeing & Productivity",
     type: "ORIGINAL",
     shortDescription:
-      "A productivity and digital wellbeing platform combining psychological assessment, cognitive scoring, daily quest generation, and habit gamification.",
+      "A psychology-driven digital detox platform replacing instant-gratification loops of Reels, Shorts, and TikTok with a real-life gamified evolution system.",
     description:
-      "EvolveAura bridges the gap between deep mental wellbeing and intentional daily execution. By evaluating behavioral patterns and psychometric indicators, it translates cognitive state into achievable, gamified daily quests and digital detox protocols.",
+      "EvolveAura bridges the gap between deep mental wellbeing and intentional daily execution. By replacing algorithmic dopamine loops with a real-life gamified evolution system, it empowers users through 4 calibrated archetypes (Scholar, Warrior, Sage, Creator).",
     problem:
       "Conventional productivity tools treat humans like linear task processors, ignoring burnout, cognitive fatigue, and compulsive digital distraction.",
     solution:
@@ -317,7 +317,7 @@ export const RECKAI_ORIGINALS: OriginalProduct[] = [
       future: ["Wearable biometric synchronization for automated HRV and sleep input"],
     },
 
-    images: ["/products/evolveaura-preview.png"],
+    images: ["/images/projects/evolveaura.png"],
     featured: true,
     status: "PUBLIC",
     createdAt: "2026-02-10T00:00:00Z",
@@ -328,11 +328,11 @@ export const RECKAI_ORIGINALS: OriginalProduct[] = [
     id: "original-organxcell",
     slug: "organxcell",
     name: "OrganXcell",
-    tagline: "An intelligent organ matching and transplant management platform.",
-    category: "Clinical Logistics & Healthcare",
+    tagline: "India's Organ Donation Coordination Platform — Making Every Match Count",
+    category: "Clinical Logistics & Healthcare Network",
     type: "ORIGINAL",
     shortDescription:
-      "An intelligent organ matching and transplant logistics platform featuring recipient prioritization algorithms and distributed organ-bank registries.",
+      "India's organ donation coordination platform — AI-powered matching, real-time transport tracking, digital consent, and simple dashboards connecting 20+ hospitals (SIH 2025).",
     description:
       "OrganXcell addresses the critical bottleneck in life-saving organ transplants. It calculates HLA/biological compatibility, urgency rankings, and logistical transit feasibility in real time to accelerate decision-making for clinical teams.",
     problem:
@@ -475,7 +475,7 @@ export const RECKAI_ORIGINALS: OriginalProduct[] = [
       future: ["National organ bank federation protocol with decentralized compliance verification"],
     },
 
-    images: ["/products/organxcell-preview.png"],
+    images: ["/images/projects/organxcell.png"],
     featured: true,
     status: "PUBLIC",
     createdAt: "2026-03-01T00:00:00Z",
@@ -483,22 +483,22 @@ export const RECKAI_ORIGINALS: OriginalProduct[] = [
   },
 
   {
-    id: "original-finance",
-    slug: "finance",
-    name: "RECKAI Finance",
-    tagline: "An intelligent financial management platform providing autonomous cashflow analysis and predictive pacing.",
-    category: "Intelligent Wealth Architecture",
+    id: "original-prosperhigh",
+    slug: "prosperhigh",
+    name: "ProsperHigh",
+    tagline: "Understand Your Investments. Understand Why.",
+    category: "Explainable Multi-Agent Investment Intelligence",
     type: "ORIGINAL",
     shortDescription:
-      "An intelligent financial management platform providing autonomous cashflow analysis, predictive spending curves, and algorithmic asset allocation.",
+      "ProsperHigh combines live market data, portfolio risk analysis, financial research, and multi-agent AI reasoning to provide personalized, explainable investment insights.",
     description:
-      "RECKAI Finance moves beyond passive bookkeeping into autonomous wealth intelligence. It synthesizes income volatility, recurring commitments, and financial goals to provide continuous, proactive guidance.",
+      "ProsperHigh delivers explainable decision intelligence for modern investors. Powered by 7 domain intelligence agents, a personalized risk engine, and citation-backed research (RAG), it demystifies complex financial research so you understand not just what to invest in, but why.",
     problem:
-      "Personal and SMB financial tools only show backwards-looking charts without actionable, forward-looking predictive foresight.",
+      "Retail and institutional investors navigate opaque financial metrics and black-box trading signals without verifiable source citations or individualized risk calibration.",
     solution:
-      "A forward-looking financial decision engine that models cashflow futures and proactively alerts users to impending liquidity risks and optimal investment windows.",
+      "An explainable multi-agent investment platform combining 7 specialized agents, real-time market telemetry, and citation-backed document analysis.",
     approach:
-      "Time-series predictive forecasting combined with rule-bound financial optimization constraints.",
+      "Multi-agent collaborative reasoning (Market, Technical, News, Fundamental, Regulatory, Risk, Synthesis) tracing every insight to verified corporate disclosures.",
 
     problemDeep: {
       friction:
@@ -632,8 +632,8 @@ export const RECKAI_ORIGINALS: OriginalProduct[] = [
       future: ["Automated recurring subscription negotiation and optimization protocols"],
     },
 
-    images: ["/products/finance-preview.png"],
-    featured: false,
+    images: ["/images/projects/prosperhigh.png"],
+    featured: true,
     status: "PUBLIC",
     createdAt: "2026-04-12T00:00:00Z",
     updatedAt: "2026-10-01T00:00:00Z",

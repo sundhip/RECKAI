@@ -26,11 +26,18 @@ export class ProductRepository {
   }
 
   /**
-   * Retrieves a single product by slug
+   * Retrieves a single product by slug (with backwards-compatible aliases)
    */
   async getBySlug(slug: string): Promise<Product | null> {
     const all = await this.getAllPublic();
-    const product = all.find((p) => p.slug === slug);
+    const product = all.find(
+      (p) =>
+        p.slug === slug ||
+        (slug === "omnixperience" && p.slug === "omnipresence") ||
+        (slug === "omnipresence" && p.slug === "omnixperience") ||
+        (slug === "finance" && p.slug === "prosperhigh") ||
+        (slug === "prosperhigh" && p.slug === "finance")
+    );
     return product || null;
   }
 

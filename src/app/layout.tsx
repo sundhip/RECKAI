@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import { siteConfig } from "@/lib/config/site";
 import { Header } from "@/components/navigation/header";
@@ -6,6 +7,20 @@ import { Footer } from "@/components/navigation/footer";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { ThemeScript } from "@/components/theme/theme-script";
 import "./globals.css";
+
+const sans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700", "800"],
+});
+
+const mono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
+  weight: ["400", "500", "600"],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -72,7 +87,7 @@ export default function RootLayout({
         <head>
           <ThemeScript />
         </head>
-        <body className="min-h-screen flex flex-col bg-white text-neutral-900 antialiased dark:bg-reckai-dark dark:text-neutral-100 selection:bg-violet-500 selection:text-white transition-colors duration-200">
+        <body className={`${sans.variable} ${mono.variable} font-sans min-h-screen flex flex-col bg-[#FBFBFD] text-slate-900 antialiased dark:bg-[#0A0A0C] dark:text-neutral-100 selection:bg-violet-600 selection:text-white transition-colors duration-200`}>
           <ThemeProvider>
             <Header />
             <main className="flex-1">{children}</main>

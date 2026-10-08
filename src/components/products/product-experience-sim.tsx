@@ -8,7 +8,7 @@ interface ProductExperienceSimProps {
 }
 
 export function ProductExperienceSim({ slug }: ProductExperienceSimProps) {
-  if (slug === "omnixperience") {
+  if (slug === "omnixperience" || slug === "omnipresence") {
     return <OmniXperienceSim />;
   }
   if (slug === "evolveaura") {
@@ -17,7 +17,7 @@ export function ProductExperienceSim({ slug }: ProductExperienceSimProps) {
   if (slug === "organxcell") {
     return <OrganXcellSim />;
   }
-  if (slug === "finance") {
+  if (slug === "finance" || slug === "prosperhigh") {
     return <FinanceSim />;
   }
   return null;

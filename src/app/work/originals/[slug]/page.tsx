@@ -96,6 +96,32 @@ export default async function OriginalProductDetailPage({ params }: PageProps) {
           </p>
         </div>
 
+        {/* Real Product Screenshot Showcase */}
+        {product.images && product.images[0] && (
+          <div className="overflow-hidden rounded-3xl border border-neutral-200/90 bg-neutral-950 shadow-floating dark:border-neutral-800">
+            <div className="flex items-center justify-between border-b border-neutral-800/80 bg-neutral-900/90 px-4 py-2.5">
+              <div className="flex items-center gap-1.5">
+                <div className="h-2.5 w-2.5 rounded-full bg-red-500/80" />
+                <div className="h-2.5 w-2.5 rounded-full bg-yellow-500/80" />
+                <div className="h-2.5 w-2.5 rounded-full bg-emerald-500/80" />
+              </div>
+              <span className="text-[11px] font-mono text-neutral-400">
+                {product.slug}.reckai.app // live platform
+              </span>
+              <span className="text-[11px] font-mono text-emerald-400 font-semibold">
+                ● Verified Production
+              </span>
+            </div>
+            <div className="aspect-[16/9] w-full overflow-hidden bg-neutral-950">
+              <img
+                src={product.images[0]}
+                alt={`${product.name} application screenshot`}
+                className="h-full w-full object-cover object-top"
+              />
+            </div>
+          </div>
+        )}
+
         {/* Hero Interactive Telemetry Frame */}
         <div className="pt-4">
           <ProductExperienceSim slug={product.slug} />

@@ -11,12 +11,30 @@ export interface OriginalProductCardProps {
 }
 
 export function OriginalProductCard({ product, featured = false }: OriginalProductCardProps) {
+  const imageUrl = product.images?.[0];
+
   return (
     <Card
-      className={`group flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 ${
+      className={`group flex flex-col justify-between overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-floating ${
         featured ? "border-violet-300/80 dark:border-violet-800/60 shadow-medium" : ""
       }`}
     >
+      {/* Real Project Screenshot Image */}
+      {imageUrl && (
+        <div className="relative aspect-[16/9] w-full overflow-hidden border-b border-neutral-200/80 bg-neutral-950 dark:border-neutral-800">
+          <img
+            src={imageUrl}
+            alt={`${product.name} live application interface`}
+            className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+          <span className="absolute bottom-2.5 right-2.5 rounded-md bg-neutral-950/80 backdrop-blur px-2 py-0.5 text-[10px] font-mono text-white border border-neutral-700/60">
+            Live Platform
+          </span>
+        </div>
+      )}
+
       <CardHeader>
         <div className="flex items-center justify-between gap-2 flex-wrap">
           <Badge variant="violet" className="font-mono text-[10px] tracking-widest font-bold">

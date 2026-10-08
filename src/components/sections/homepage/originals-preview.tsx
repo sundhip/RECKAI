@@ -90,39 +90,38 @@ export function OriginalsPreview({ originals }: { originals: OriginalProduct[] }
                   </div>
                 </div>
 
-                {/* Right Side Visual Telemetry Mock */}
-                <div className="lg:col-span-5 rounded-2xl border border-neutral-200/90 bg-white p-6 shadow-subtle dark:border-neutral-800 dark:bg-neutral-900/60 space-y-4">
-                  <div className="flex items-center justify-between text-xs font-mono text-neutral-400 border-b border-neutral-100 dark:border-neutral-800 pb-3">
-                    <span>LIVE RUNTIME</span>
-                    <span className="text-emerald-500 font-bold">● ACTIVE</span>
-                  </div>
-
-                  <div className="space-y-3">
-                    <div className="p-3.5 rounded-xl border border-neutral-200/70 bg-neutral-50/80 dark:border-neutral-800 dark:bg-neutral-850 text-xs space-y-1">
-                      <div className="font-semibold text-neutral-900 dark:text-white">
-                        Wardrobe Computer Vision
+                {/* Right Side Visual Live Product Screenshot Showcase */}
+                <div className="lg:col-span-5 relative group">
+                  <div className="overflow-hidden rounded-2xl border border-neutral-200/90 bg-neutral-950 shadow-floating dark:border-neutral-800 transition-all duration-300">
+                    {/* Window Chrome Header */}
+                    <div className="flex items-center justify-between border-b border-neutral-800/80 bg-neutral-900/90 px-3.5 py-2">
+                      <div className="flex items-center gap-1.5">
+                        <div className="h-2.5 w-2.5 rounded-full bg-red-500/80" />
+                        <div className="h-2.5 w-2.5 rounded-full bg-yellow-500/80" />
+                        <div className="h-2.5 w-2.5 rounded-full bg-emerald-500/80" />
                       </div>
-                      <p className="text-neutral-600 dark:text-neutral-400">
-                        Contextual clothing classification and weather-adaptive styling loops.
-                      </p>
+                      <span className="text-[10px] font-mono text-neutral-400">
+                        {featured.slug}.reckai.app // live
+                      </span>
+                      <span className="text-[10px] font-mono text-emerald-400 font-semibold">
+                        ● OPERATIONAL
+                      </span>
                     </div>
 
-                    <div className="p-3.5 rounded-xl border border-neutral-200/70 bg-neutral-50/80 dark:border-neutral-800 dark:bg-neutral-850 text-xs space-y-1">
-                      <div className="font-semibold text-neutral-900 dark:text-white">
-                        Circadian Schedule Buffer
+                    {/* Real Screenshot */}
+                    <div className="relative aspect-[16/10] overflow-hidden bg-neutral-950">
+                      <img
+                        src={featured.images?.[0] || "/images/projects/omnipresence.png"}
+                        alt={`${featured.name} application preview`}
+                        className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                      <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-white">
+                        <span className="font-semibold drop-shadow">{featured.name}</span>
+                        <span className="text-[10px] font-mono bg-violet-600/90 px-2 py-0.5 rounded backdrop-blur">
+                          Active System
+                        </span>
                       </div>
-                      <p className="text-neutral-600 dark:text-neutral-400">
-                        Calendar coordination with automated energy conservation zones.
-                      </p>
-                    </div>
-
-                    <div className="p-3.5 rounded-xl border border-neutral-200/70 bg-neutral-50/80 dark:border-neutral-800 dark:bg-neutral-850 text-xs space-y-1">
-                      <div className="font-semibold text-neutral-900 dark:text-white">
-                        Autonomous Liquidity Curve
-                      </div>
-                      <p className="text-neutral-600 dark:text-neutral-400">
-                        Predictive pacing engine alerting before discretionary commitments.
-                      </p>
                     </div>
                   </div>
                 </div>

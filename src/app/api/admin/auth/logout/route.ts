@@ -8,5 +8,6 @@ export async function POST() {
     { status: 200, headers: SECURITY_HEADERS }
   );
   response.cookies.delete(SESSION_COOKIE_NAME);
+  response.cookies.delete("reckai_admin_token");
   return response;
 }
