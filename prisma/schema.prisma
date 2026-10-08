@@ -1,0 +1,164 @@
+// Prisma schema for RECKAI
+// Configured for PostgreSQL in production and flexible database drivers
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum ProductType {
+  ORIGINAL
+  BUILD
+}
+
+enum ContentStatus {
+  DRAFT
+  PUBLIC
+  PRIVATE
+  ARCHIVED
+}
+
+enum BuildVisibility {
+  PUBLIC
+  CONFIDENTIAL
+  ANONYMIZED
+}
+
+enum InquiryStatus {
+  NEW
+  REVIEWING
+  CONTACTED
+  DISCOVERY
+  PROPOSAL
+  IN_PROGRESS
+  COMPLETED
+  REJECTED
+}
+
+enum ContactStatus {
+  NEW
+  READ
+  ARCHIVED
+}
+
+enum AdminRole {
+  SUPERADMIN
+  ADMIN
+  EDITOR
+}
+
+model Product {
+  id                String          @id @default(uuid())
+  slug              String          @unique
+  name              String
+  category          String
+  type              ProductType     // ORIGINAL vs BUILD
+  shortDescription  String
+  description       String
+  problem           String
+  solution          String
+  approach          String?
+  aiCapabilities    String[]        // Structured AI capability tags / highlights
+  technologies      String[]        // Tech stack items
+  images            String[]
+  videos            String[]
+  liveUrl           String?
+  githubUrl         String?
+  featured          Boolean         @default(false)
+  status            ContentStatus   @default(DRAFT)
+  
+  // Specific to RECKAI BUILDS (client privacy & showcase controls)
+  visibility        BuildVisibility @default(PUBLIC)
+  clientName        String?         // Omitted or anonymized when confidential
+  industry          String?
+  servicesProvided  String[]
+
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime        @updatedAt
+
+  caseStudy         CaseStudy?
+
+  @@index([type, status])
+  @@index([slug])
+  @@index([featured])
+}
+
+model CaseStudy {
+  id           String        @id @default(uuid())
+  productId    String        @unique
+  product      Product       @relation(fields: [productId], references: [id], onDelete: Cascade)
+  title        String
+  overview     String
+  challenge    String
+  architecture String
+  outcomes     String
+  media        String[]
+  isPublished  Boolean       @default(false)
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+}
+
+model ProjectInquiry {
+  id              String        @id @default(uuid())
+  name            String
+  email           String
+  company         String?
+  projectType     String        // e.g., "Web App", "AI Product", "System Architecture", "0 to 1"
+  description     String
+  problem         String
+  aiRequirements  String?
+  timeline        String?
+  budget          String?
+  referenceUrl    String?
+  status          InquiryStatus @default(NEW)
+  ipHash          String?       // For rate-limiting & abuse tracking without storing raw IP
+  userAgent       String?
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+
+  @@index([status])
+  @@index([createdAt])
+  @@index([email])
+}
+
+model ContactMessage {
+  id        String        @id @default(uuid())
+  name      String
+  email     String
+  message   String
+  status    ContactStatus @default(NEW)
+  ipHash    String?
+  userAgent String?
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+
+  @@index([status])
+  @@index([createdAt])
+}
+
+model Service {
+  id           String   @id @default(uuid())
+  slug         String   @unique
+  name         String
+  description  String
+  deliverables String[]
+  order        Int      @default(0)
+  isActive     Boolean  @default(true)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model AdminUser {
+  id           String    @id @default(uuid())
+  email        String    @unique
+  passwordHash String
+  name         String
+  role         AdminRole @default(ADMIN)
+  lastLoginAt  DateTime?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+}
