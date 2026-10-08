@@ -215,7 +215,7 @@ export function Hero() {
           </div>
 
           {/* Workstation Container */}
-          <div className="rounded-3xl border border-slate-200/90 bg-white/95 p-3.5 sm:p-6 shadow-[0_20px_60px_-15px_rgba(99,102,241,0.12),0_0_0_1px_rgba(255,255,255,0.8)_inset] backdrop-blur-xl dark:border-neutral-800 dark:bg-[#111116]/95 dark:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)]">
+          <div className="rounded-3xl border border-slate-200/90 bg-white/95 p-3.5 sm:p-6 shadow-[0_20px_60px_-15px_rgba(99,102,241,0.12),0_0_0_1px_rgba(255,255,255,0.8)_inset] backdrop-blur-xl dark:border-neutral-800 dark:bg-reckai-dark-surface dark:shadow-none">
             {/* Window Chrome Header */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-3 px-1 border-b border-slate-200/80 dark:border-neutral-800 gap-3">
               <div className="flex items-center gap-2">
@@ -224,13 +224,13 @@ export function Hero() {
                   <div className="h-3 w-3 rounded-full bg-[#FFBD2E] border border-[#DEA123]/60 shadow-2xs" />
                   <div className="h-3 w-3 rounded-full bg-[#27C93F] border border-[#1AAB29]/60 shadow-2xs" />
                 </div>
-                <span className="ml-3 text-xs font-mono text-slate-500 dark:text-neutral-400 hidden sm:inline">
+                <span className="ml-3 text-xs sm:text-sm font-mono text-slate-600 dark:text-neutral-400 hidden sm:inline">
                   reckai-platform // {activeTab}.reckai.app
                 </span>
               </div>
 
               {/* Product Switcher Tabs */}
-              <div className="flex flex-wrap items-center gap-1.5 p-1 rounded-2xl bg-slate-100/90 dark:bg-neutral-900/90 border border-slate-200/80 dark:border-neutral-800">
+              <div className="flex flex-wrap items-center gap-1.5 p-1 rounded-2xl bg-slate-100/90 dark:bg-neutral-900 border border-slate-200/80 dark:border-neutral-800">
                 {(
                   [
                     { id: "prosperhigh", label: "ProsperHigh" },
@@ -243,10 +243,10 @@ export function Hero() {
                     key={tab.id}
                     type="button"
                     onClick={() => setActiveTab(tab.id)}
-                    className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all ${
+                    className={`px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
                       activeTab === tab.id
-                        ? "bg-gradient-to-r from-violet-600 to-indigo-600 text-white shadow-md scale-[1.02]"
-                        : "text-slate-600 hover:text-slate-950 dark:text-neutral-400 dark:hover:text-white hover:bg-white/80 dark:hover:bg-neutral-800/80"
+                        ? "bg-gradient-to-r from-violet-600 to-indigo-600 text-white shadow-md scale-[1.02] dark:bg-none dark:bg-neutral-800 dark:text-violet-300 dark:shadow-none"
+                        : "text-slate-600 hover:text-slate-950 dark:text-neutral-400 dark:hover:text-white hover:bg-white/80 dark:hover:bg-neutral-800/60"
                     }`}
                   >
                     {tab.label}
@@ -256,22 +256,22 @@ export function Hero() {
             </div>
 
             {/* Inner Project Viewport */}
-            <div className="relative mt-4 rounded-2xl bg-gradient-to-b from-[#F8FAFC] to-[#F1F5F9]/60 p-5 sm:p-7 border border-slate-200/80 dark:bg-gradient-to-b dark:from-[#0A0A0C] dark:to-[#0D0D12] dark:border-neutral-800 space-y-6">
+            <div className="relative mt-4 rounded-2xl bg-gradient-to-b from-[#F8FAFC] to-[#F1F5F9]/60 p-5 sm:p-7 border border-slate-200/80 dark:bg-[#0A0A0C] dark:border-neutral-800 space-y-6">
               {/* Product Meta Header */}
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200/80 dark:border-neutral-800 pb-5">
                 <div>
                   <div className="flex items-center gap-2 flex-wrap">
-                    <Badge variant="violet" className="text-[10px] font-mono font-bold tracking-wider">
+                    <Badge variant="violet" className="text-xs font-mono font-bold tracking-wider">
                       {current.badge}
                     </Badge>
-                    <span className="text-xs font-mono text-slate-500 dark:text-neutral-400">
+                    <span className="text-xs sm:text-sm font-mono text-slate-700 dark:text-neutral-300 font-medium">
                       {current.category}
                     </span>
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-slate-950 dark:text-white mt-1.5">
+                  <h3 className="text-2xl sm:text-4xl font-bold text-slate-950 dark:text-white mt-1.5">
                     {current.name}
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 dark:text-neutral-400 mt-0.5">
+                  <p className="text-sm sm:text-base text-slate-700 dark:text-neutral-300 font-medium mt-1">
                     {current.tagline}
                   </p>
                 </div>
@@ -283,9 +283,9 @@ export function Hero() {
               </div>
 
               {/* Real Project Screenshot in a Realistic Desktop Browser Frame */}
-              <div className="overflow-hidden rounded-2xl border border-slate-200/90 bg-slate-900 shadow-xl dark:border-neutral-800 dark:bg-black group">
+              <div className="overflow-hidden rounded-2xl border border-slate-200/90 bg-slate-900 shadow-xl dark:border-neutral-800 dark:bg-[#0A0A0C] group">
                 {/* Browser Top Navigation Chrome */}
-                <div className="flex items-center justify-between px-4 py-2.5 bg-slate-100/95 dark:bg-neutral-900/95 border-b border-slate-200/80 dark:border-neutral-800/80">
+                <div className="flex items-center justify-between px-4 py-2.5 bg-slate-100/95 dark:bg-neutral-900 border-b border-slate-200/80 dark:border-neutral-800">
                   {/* Traffic Light Window Controls */}
                   <div className="flex items-center gap-2">
                     <span className="h-3 w-3 rounded-full bg-[#FF5F56] border border-[#E0443E]/60 inline-block shadow-2xs" />
@@ -294,15 +294,15 @@ export function Hero() {
                   </div>
 
                   {/* Sleek Centered URL Address Pill */}
-                  <div className="flex items-center gap-2 px-3.5 py-1 rounded-full bg-white dark:bg-neutral-800/90 border border-slate-200/80 dark:border-neutral-700/60 text-xs font-mono text-slate-700 dark:text-neutral-300 shadow-2xs max-w-xs sm:max-w-md w-full justify-center">
-                    <svg className="w-3.5 h-3.5 text-slate-400 dark:text-neutral-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white dark:bg-neutral-800 border border-slate-200/80 dark:border-neutral-700/80 text-xs sm:text-sm font-mono text-slate-800 dark:text-neutral-200 shadow-2xs max-w-xs sm:max-w-md w-full justify-center">
+                    <svg className="w-3.5 h-3.5 text-slate-500 dark:text-neutral-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                     </svg>
                     <span className="truncate">https://{current.slug}.reckai.app</span>
                   </div>
 
                   {/* Right Status Indicator */}
-                  <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800/60 text-[10px] font-mono text-emerald-700 dark:text-emerald-400 font-semibold">
+                  <div className="flex items-center gap-1.5 px-3 py-1 rounded-md bg-emerald-50 dark:bg-emerald-950/70 border border-emerald-200 dark:border-emerald-800/60 text-xs font-mono text-emerald-700 dark:text-emerald-400 font-bold">
                     <span className="relative flex h-2 w-2">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                       <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
@@ -312,7 +312,7 @@ export function Hero() {
                 </div>
 
                 {/* Screenshot Display - Pristine, Uncut, Uncovered */}
-                <div className="w-full overflow-hidden bg-slate-950 flex items-center justify-center p-0.5 sm:p-1">
+                <div className="w-full overflow-hidden bg-slate-950 dark:bg-[#0A0A0C] flex items-center justify-center p-0.5 sm:p-1">
                   <img
                     src={current.image}
                     alt={`${current.name} actual interface screenshot`}
@@ -326,25 +326,25 @@ export function Hero() {
                 {current.features.map((feat, idx) => (
                   <div
                     key={idx}
-                    className="flex flex-col justify-between h-full rounded-2xl border border-slate-200/90 bg-white/95 p-5 shadow-sm dark:border-neutral-800 dark:bg-neutral-900/75 hover:border-violet-300 dark:hover:border-violet-600/50 hover:shadow-md transition-all duration-200"
+                    className="flex flex-col justify-between h-full rounded-2xl border border-slate-200/90 bg-white/95 p-5 sm:p-6 shadow-sm dark:border-neutral-800 dark:bg-reckai-dark-surface hover:border-violet-300 dark:hover:border-neutral-700 hover:shadow-md transition-all duration-200"
                   >
                     <div>
                       <div className="flex items-center justify-between pb-2">
-                        <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-violet-700 dark:text-violet-400 bg-violet-50 dark:bg-violet-950/60 px-2.5 py-0.5 rounded border border-violet-200/60 dark:border-violet-800/40">
+                        <span className="text-xs font-mono font-bold uppercase tracking-wider text-violet-700 dark:text-violet-400 bg-violet-50 dark:bg-violet-950/60 px-2.5 py-1 rounded border border-violet-200/60 dark:border-violet-800/40">
                           {feat.subtitle}
                         </span>
-                        <span className="text-[10px] font-mono text-slate-400 dark:text-neutral-500">
+                        <span className="text-xs font-mono font-bold text-slate-500 dark:text-neutral-400">
                           0{idx + 1}
                         </span>
                       </div>
-                      <h4 className="text-base font-bold text-slate-900 dark:text-white mt-1.5">
+                      <h4 className="text-lg sm:text-xl font-bold text-slate-950 dark:text-white mt-2">
                         {feat.title}
                       </h4>
-                      <p className="text-xs text-slate-600 dark:text-neutral-400 leading-relaxed mt-2">
+                      <p className="text-sm sm:text-[15px] text-slate-700 dark:text-neutral-200 leading-relaxed mt-2.5 font-normal">
                         {feat.desc}
                       </p>
                     </div>
-                    <div className="mt-4 pt-3 border-t border-slate-100 dark:border-neutral-800/80 text-[11px] font-mono text-violet-600 dark:text-violet-400 font-semibold flex items-center gap-1.5">
+                    <div className="mt-5 pt-3.5 border-t border-slate-100 dark:border-neutral-800 text-xs sm:text-sm font-mono text-violet-700 dark:text-violet-400 font-semibold flex items-center gap-1.5">
                       <span>{feat.meta}</span>
                     </div>
                   </div>
@@ -352,14 +352,14 @@ export function Hero() {
               </div>
 
               {/* Bottom Runtime Meta */}
-              <div className="pt-4 border-t border-slate-200/80 dark:border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-mono text-slate-500 dark:text-neutral-400">
+              <div className="pt-4 border-t border-slate-200/80 dark:border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs sm:text-sm font-mono text-slate-700 dark:text-neutral-300">
                 <div className="flex items-center gap-2">
                   <span className="h-2 w-2 rounded-full bg-emerald-500" />
                   <span>Verified RECKAI Production Deployment · Architecture v3.4</span>
                 </div>
                 <Link
                   href={`/work/originals/${current.slug}`}
-                  className="text-violet-600 dark:text-violet-400 hover:text-violet-700 dark:hover:text-violet-300 font-semibold flex items-center gap-1 group"
+                  className="text-violet-600 dark:text-violet-400 hover:text-violet-700 dark:hover:text-violet-300 font-semibold flex items-center gap-1 group text-xs sm:text-sm"
                 >
                   <span>{current.name} Technical Case Study</span>
                   <span className="transition-transform group-hover:translate-x-0.5">→</span>

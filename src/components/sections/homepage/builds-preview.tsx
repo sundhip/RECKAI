@@ -24,7 +24,7 @@ export function BuildsPreview() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Text Column */}
           <div className="lg:col-span-6 space-y-6">
-            <Badge variant="default" className="font-mono text-[10px] tracking-widest font-bold">
+            <Badge variant="default" className="font-mono text-xs tracking-widest font-bold">
               RECKAI BUILDS
             </Badge>
 
@@ -32,28 +32,28 @@ export function BuildsPreview() {
               Have an idea worth building?
             </h2>
 
-            <p className="text-base sm:text-lg text-slate-600 dark:text-neutral-300 leading-relaxed font-normal">
+            <p className="text-base sm:text-lg text-slate-700 dark:text-neutral-200 leading-relaxed font-normal">
               Bring us the problem, the idea, or the opportunity. We don&apos;t just write tickets—we partner as a high-velocity product engineering team to turn concepts into real, production-ready software.
             </p>
 
             {/* Transformation Step Flow */}
             <div className="space-y-3 pt-2">
-              <div className="text-xs font-mono uppercase tracking-wider text-slate-400 dark:text-neutral-500">
+              <div className="text-xs sm:text-sm font-mono uppercase tracking-wider text-slate-500 dark:text-neutral-400 font-semibold">
                 The Product Transformation Pipeline
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {steps.map((st, idx) => (
                   <div
                     key={st.label}
-                    className="p-3 rounded-xl border border-slate-200/90 bg-white/95 shadow-2xs hover:border-violet-300 dark:border-neutral-800 dark:bg-neutral-900/80 transition-colors"
+                    className="p-3.5 rounded-xl border border-slate-200/90 bg-white/95 shadow-2xs hover:border-violet-300 dark:border-neutral-800 dark:bg-neutral-900/80 transition-colors"
                   >
-                    <div className="text-[10px] font-mono text-violet-600 dark:text-violet-400 font-bold">
+                    <div className="text-xs font-mono text-violet-600 dark:text-violet-400 font-bold">
                       0{idx + 1}
                     </div>
-                    <div className="text-xs font-semibold text-slate-900 dark:text-white mt-0.5">
+                    <div className="text-sm font-bold text-slate-900 dark:text-white mt-1">
                       {st.label}
                     </div>
-                    <div className="text-[11px] text-slate-500 dark:text-neutral-400 mt-0.5">{st.desc}</div>
+                    <div className="text-xs sm:text-sm text-slate-600 dark:text-neutral-300 mt-1">{st.desc}</div>
                   </div>
                 ))}
               </div>
@@ -78,15 +78,15 @@ export function BuildsPreview() {
 
           {/* Right Column: Technically Credible Transformation Visual */}
           <div className="lg:col-span-6 relative">
-            <div className="rounded-3xl border border-slate-200/90 bg-white/95 p-6 sm:p-8 shadow-[0_12px_40px_rgba(99,102,241,0.08)] dark:border-neutral-800 dark:bg-[#111116] space-y-6">
+            <div className="rounded-3xl border border-slate-200/90 bg-white/95 p-6 sm:p-8 shadow-[0_12px_40px_rgba(99,102,241,0.08)] dark:border-neutral-800 dark:bg-reckai-dark-surface dark:shadow-none space-y-6">
               <div className="flex items-center justify-between border-b border-neutral-100 dark:border-neutral-850 pb-4">
                 <div className="flex items-center gap-2">
                   <span className="h-2 w-2 rounded-full bg-violet-600" />
-                  <span className="text-xs font-mono text-neutral-500">
+                  <span className="text-xs sm:text-sm font-mono text-slate-600 dark:text-neutral-400 font-semibold">
                     INTAKE ENGINE // ARCHITECTURE SYNTHESIS
                   </span>
                 </div>
-                <Badge variant="subtle" className="text-[10px]">
+                <Badge variant="subtle" className="text-xs font-mono font-semibold">
                   Bespoke Engineering
                 </Badge>
               </div>

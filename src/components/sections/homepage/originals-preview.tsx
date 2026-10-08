@@ -40,14 +40,14 @@ export function OriginalsPreview({ originals }: { originals: OriginalProduct[] }
         <div className="space-y-8">
           {/* Featured Large Hero Card */}
           {featured && (
-            <div className="rounded-3xl border border-slate-200/90 bg-gradient-to-b from-white via-white to-slate-50/80 p-8 sm:p-12 shadow-[0_12px_40px_rgba(99,102,241,0.08)] dark:border-neutral-800 dark:from-[#111116] dark:to-[#0A0A0C]">
+            <div className="rounded-3xl border border-slate-200/90 bg-gradient-to-b from-white via-white to-slate-50/80 p-8 sm:p-12 shadow-[0_12px_40px_rgba(99,102,241,0.08)] dark:border-neutral-800 dark:bg-reckai-dark-surface dark:shadow-none">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div className="lg:col-span-7 space-y-6">
                   <div className="flex items-center gap-3">
-                    <Badge variant="violet" className="font-mono text-[10px] tracking-widest font-bold">
+                    <Badge variant="violet" className="font-mono text-xs tracking-widest font-bold">
                       FLAGSHIP ORIGINAL
                     </Badge>
-                    <span className="text-xs font-mono text-slate-500 dark:text-neutral-400 uppercase tracking-wider">
+                    <span className="text-xs sm:text-sm font-mono text-slate-700 dark:text-neutral-300 uppercase tracking-wider font-semibold">
                       {featured.category}
                     </span>
                   </div>
@@ -56,19 +56,19 @@ export function OriginalsPreview({ originals }: { originals: OriginalProduct[] }
                     {featured.name}
                   </h3>
 
-                  <p className="text-base sm:text-lg text-slate-600 dark:text-neutral-300 leading-relaxed max-w-2xl font-normal">
+                  <p className="text-base sm:text-lg text-slate-700 dark:text-neutral-200 leading-relaxed max-w-2xl font-normal">
                     {featured.description}
                   </p>
 
-                  <div className="space-y-2 pt-2">
-                    <div className="text-xs font-mono uppercase tracking-wider text-neutral-400">
+                  <div className="space-y-2.5 pt-2">
+                    <div className="text-xs font-mono uppercase tracking-wider text-slate-500 dark:text-neutral-400 font-semibold">
                       Core Intelligence Modules
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {featured.aiCapabilities.map((cap) => (
                         <span
                           key={cap}
-                          className="rounded-lg bg-white border border-neutral-200 px-3 py-1.5 text-xs font-medium text-neutral-800 dark:bg-neutral-850 dark:border-neutral-750 dark:text-neutral-200 shadow-sm"
+                          className="rounded-lg bg-slate-50 border border-slate-200/90 px-3 py-1.5 text-xs sm:text-sm font-semibold text-slate-800 dark:bg-neutral-850 dark:border-neutral-750 dark:text-neutral-200 shadow-2xs"
                         >
                           ✦ {cap}
                         </span>

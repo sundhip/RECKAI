@@ -105,11 +105,11 @@ export default async function OriginalProductDetailPage({ params }: PageProps) {
                 <span className="h-3 w-3 rounded-full bg-[#FFBD2E]" />
                 <span className="h-3 w-3 rounded-full bg-[#27C93F]" />
               </div>
-              <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/80 border border-slate-700/60 text-xs font-mono text-slate-300">
+              <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/90 border border-slate-700/80 text-xs sm:text-sm font-mono text-slate-200">
                 <span>🔒</span>
                 <span>https://{product.slug}.reckai.app</span>
               </div>
-              <span className="text-[11px] font-mono text-emerald-400 font-semibold flex items-center gap-1.5">
+              <span className="text-xs font-mono text-emerald-400 font-bold flex items-center gap-1.5">
                 <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
                 Verified Production
               </span>

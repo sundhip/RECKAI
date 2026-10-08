@@ -78,27 +78,27 @@ export function ProcessPreview() {
               key={st.step}
               className={`rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between ${
                 st.highlight
-                  ? "border border-violet-500/80 bg-gradient-to-b from-violet-50/80 to-purple-50/40 dark:bg-violet-950/30 dark:border-violet-600 shadow-[0_8px_30px_rgba(124,58,237,0.12)]"
-                  : "border border-slate-200/90 bg-white/95 shadow-2xs hover:border-violet-300 dark:border-neutral-800 dark:bg-neutral-900/80 hover:shadow-md"
+                  ? "border border-violet-500/80 bg-gradient-to-b from-violet-50/80 to-purple-50/40 dark:bg-violet-950/40 dark:border-violet-600 shadow-[0_8px_30px_rgba(124,58,237,0.12)] dark:shadow-none"
+                  : "border border-slate-200/90 bg-white/95 shadow-2xs hover:border-violet-300 dark:border-neutral-800 dark:bg-reckai-dark-surface hover:shadow-md"
               }`}
             >
               <div>
-                <div className="flex items-center justify-between text-xs font-mono font-bold">
-                  <span className={st.highlight ? "text-violet-600 dark:text-violet-400" : "text-slate-400 dark:text-neutral-500"}>
+                <div className="flex items-center justify-between text-xs sm:text-sm font-mono font-bold">
+                  <span className={st.highlight ? "text-violet-600 dark:text-violet-400" : "text-slate-500 dark:text-neutral-400"}>
                     {st.step}
                   </span>
                   {st.highlight && (
-                    <Badge variant="violet" className="text-[10px] uppercase">
+                    <Badge variant="violet" className="text-xs uppercase font-bold">
                       Core Ethos
                     </Badge>
                   )}
                 </div>
 
-                <h3 className="text-xl font-bold text-slate-950 dark:text-white mt-4">
+                <h3 className="text-xl sm:text-2xl font-bold text-slate-950 dark:text-white mt-4">
                   {st.title}
                 </h3>
 
-                <p className="text-xs sm:text-sm text-slate-600 dark:text-neutral-400 mt-2 leading-relaxed">
+                <p className="text-sm sm:text-[15px] text-slate-700 dark:text-neutral-200 mt-2.5 leading-relaxed font-normal">
                   {st.desc}
                 </p>
               </div>

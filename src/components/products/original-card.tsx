@@ -15,7 +15,7 @@ export function OriginalProductCard({ product, featured = false }: OriginalProdu
 
   return (
     <Card
-      className={`group flex flex-col justify-between overflow-hidden transition-all duration-300 hover:-translate-y-1 border border-slate-200/90 bg-white/95 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:border-violet-300 hover:shadow-[0_12px_36px_rgba(99,102,241,0.09)] dark:bg-[#111116] dark:border-neutral-800 dark:hover:border-violet-600/50 ${
+      className={`group flex flex-col justify-between overflow-hidden transition-all duration-300 hover:-translate-y-1 border border-slate-200/90 bg-white/95 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:border-violet-300 hover:shadow-[0_12px_36px_rgba(99,102,241,0.09)] dark:bg-reckai-dark-surface dark:border-neutral-800 dark:hover:border-neutral-700 dark:shadow-none ${
         featured ? "border-violet-300/80 dark:border-violet-800/60 shadow-medium" : ""
       }`}
     >
@@ -28,7 +28,7 @@ export function OriginalProductCard({ product, featured = false }: OriginalProdu
               <span className="h-2 w-2 rounded-full bg-[#FFBD2E]" />
               <span className="h-2 w-2 rounded-full bg-[#27C93F]" />
             </div>
-            <span className="text-[10px] font-mono text-slate-500 dark:text-neutral-400">
+            <span className="text-xs font-mono text-slate-600 dark:text-neutral-300">
               {product.slug}.reckai.app
             </span>
           </div>
@@ -45,10 +45,10 @@ export function OriginalProductCard({ product, featured = false }: OriginalProdu
 
       <CardHeader>
         <div className="flex items-center justify-between gap-2 flex-wrap">
-          <Badge variant="violet" className="font-mono text-[10px] tracking-widest font-bold">
+          <Badge variant="violet" className="font-mono text-xs tracking-widest font-bold">
             RECKAI ORIGINAL
           </Badge>
-          <span className="text-xs font-mono text-neutral-500 uppercase tracking-wider">
+          <span className="text-xs sm:text-sm font-mono text-slate-700 dark:text-neutral-300 uppercase tracking-wider font-semibold">
             {product.category}
           </span>
         </div>
@@ -57,7 +57,7 @@ export function OriginalProductCard({ product, featured = false }: OriginalProdu
           {product.name}
         </CardTitle>
 
-        <CardDescription className="text-sm sm:text-base mt-2 line-clamp-3">
+        <CardDescription className="text-sm sm:text-base mt-2 line-clamp-3 text-slate-700 dark:text-neutral-300 font-normal">
           {product.shortDescription}
         </CardDescription>
       </CardHeader>
@@ -65,14 +65,14 @@ export function OriginalProductCard({ product, featured = false }: OriginalProdu
       <CardContent className="space-y-4">
         {/* Capability Tags */}
         <div className="space-y-1.5">
-          <div className="text-[11px] font-mono uppercase tracking-wider text-neutral-500">
+          <div className="text-xs font-mono uppercase tracking-wider text-slate-500 dark:text-neutral-400 font-semibold">
             Intelligence
           </div>
           <div className="flex flex-wrap gap-1.5">
             {product.aiCapabilities.slice(0, 3).map((cap) => (
               <span
                 key={cap}
-                className="rounded-md bg-neutral-100 px-2.5 py-1 text-xs font-medium text-neutral-800 dark:bg-neutral-800 dark:text-neutral-200"
+                className="rounded-md bg-slate-100 border border-slate-200/80 px-2.5 py-1 text-xs sm:text-sm font-semibold text-slate-800 dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-200"
               >
                 {cap}
               </span>
@@ -85,7 +85,7 @@ export function OriginalProductCard({ product, featured = false }: OriginalProdu
           {product.technologies.slice(0, 3).map((tech) => (
             <span
               key={tech}
-              className="text-[11px] font-mono text-neutral-500 dark:text-neutral-400 mr-2"
+              className="text-xs font-mono text-slate-600 dark:text-neutral-400 mr-2"
             >
               #{tech}
             </span>
