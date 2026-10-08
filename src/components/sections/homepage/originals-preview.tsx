@@ -40,23 +40,23 @@ export function OriginalsPreview({ originals }: { originals: OriginalProduct[] }
         <div className="space-y-8">
           {/* Featured Large Hero Card */}
           {featured && (
-            <div className="rounded-3xl border border-violet-200/80 bg-gradient-to-b from-white to-neutral-50/50 p-8 sm:p-12 shadow-medium dark:border-violet-900/40 dark:from-reckai-dark-surface dark:to-reckai-dark">
+            <div className="rounded-3xl border border-slate-200/90 bg-gradient-to-b from-white via-white to-slate-50/80 p-8 sm:p-12 shadow-[0_12px_40px_rgba(99,102,241,0.08)] dark:border-neutral-800 dark:from-[#111116] dark:to-[#0A0A0C]">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div className="lg:col-span-7 space-y-6">
                   <div className="flex items-center gap-3">
                     <Badge variant="violet" className="font-mono text-[10px] tracking-widest font-bold">
                       FLAGSHIP ORIGINAL
                     </Badge>
-                    <span className="text-xs font-mono text-neutral-500 uppercase tracking-wider">
+                    <span className="text-xs font-mono text-slate-500 dark:text-neutral-400 uppercase tracking-wider">
                       {featured.category}
                     </span>
                   </div>
 
-                  <h3 className="text-3xl sm:text-5xl font-bold tracking-tight text-neutral-950 dark:text-white">
+                  <h3 className="text-3xl sm:text-5xl font-bold tracking-tight text-slate-950 dark:text-white">
                     {featured.name}
                   </h3>
 
-                  <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed max-w-2xl">
+                  <p className="text-base sm:text-lg text-slate-600 dark:text-neutral-300 leading-relaxed max-w-2xl font-normal">
                     {featured.description}
                   </p>
 
@@ -92,36 +92,30 @@ export function OriginalsPreview({ originals }: { originals: OriginalProduct[] }
 
                 {/* Right Side Visual Live Product Screenshot Showcase */}
                 <div className="lg:col-span-5 relative group">
-                  <div className="overflow-hidden rounded-2xl border border-neutral-200/90 bg-neutral-950 shadow-floating dark:border-neutral-800 transition-all duration-300">
+                  <div className="overflow-hidden rounded-2xl border border-slate-200/90 bg-slate-950 shadow-xl dark:border-neutral-800 transition-all duration-300">
                     {/* Window Chrome Header */}
-                    <div className="flex items-center justify-between border-b border-neutral-800/80 bg-neutral-900/90 px-3.5 py-2">
+                    <div className="flex items-center justify-between border-b border-slate-800/80 bg-slate-900/95 px-3.5 py-2.5">
                       <div className="flex items-center gap-1.5">
-                        <div className="h-2.5 w-2.5 rounded-full bg-red-500/80" />
-                        <div className="h-2.5 w-2.5 rounded-full bg-yellow-500/80" />
-                        <div className="h-2.5 w-2.5 rounded-full bg-emerald-500/80" />
+                        <div className="h-2.5 w-2.5 rounded-full bg-[#FF5F56]" />
+                        <div className="h-2.5 w-2.5 rounded-full bg-[#FFBD2E]" />
+                        <div className="h-2.5 w-2.5 rounded-full bg-[#27C93F]" />
                       </div>
-                      <span className="text-[10px] font-mono text-neutral-400">
-                        {featured.slug}.reckai.app // live
+                      <span className="text-[10px] font-mono text-slate-400">
+                        {featured.slug}.reckai.app
                       </span>
-                      <span className="text-[10px] font-mono text-emerald-400 font-semibold">
-                        ● OPERATIONAL
+                      <span className="text-[10px] font-mono text-emerald-400 font-semibold flex items-center gap-1">
+                        <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                        LIVE
                       </span>
                     </div>
 
-                    {/* Real Screenshot */}
-                    <div className="relative aspect-[16/10] overflow-hidden bg-neutral-950">
+                    {/* Real Screenshot - Pristine & Uncovered */}
+                    <div className="relative w-full overflow-hidden bg-slate-950">
                       <img
                         src={featured.images?.[0] || "/images/projects/omnipresence.png"}
                         alt={`${featured.name} application preview`}
-                        className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                        className="w-full h-auto object-contain object-top rounded-b-xl transition-transform duration-500 group-hover:scale-[1.01]"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
-                      <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-white">
-                        <span className="font-semibold drop-shadow">{featured.name}</span>
-                        <span className="text-[10px] font-mono bg-violet-600/90 px-2 py-0.5 rounded backdrop-blur">
-                          Active System
-                        </span>
-                      </div>
                     </div>
                   </div>
                 </div>

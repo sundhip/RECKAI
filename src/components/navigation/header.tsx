@@ -7,7 +7,7 @@ import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-neutral-200/60 bg-white/80 backdrop-blur-md dark:border-neutral-800/80 dark:bg-reckai-dark/80">
+    <header className="sticky top-0 z-50 w-full border-b border-slate-200/80 bg-white/90 backdrop-blur-md shadow-2xs dark:border-neutral-800/80 dark:bg-reckai-dark/90">
       <Container className="flex h-16 items-center justify-between">
         {/* Brand Wordmark */}
         <div className="flex items-center gap-8">
@@ -15,7 +15,7 @@ export function Header() {
             href="/"
             className="flex items-center gap-2 group transition-opacity hover:opacity-90"
           >
-            <span className="text-xl font-bold tracking-tightest text-neutral-950 dark:text-white">
+            <span className="text-xl font-extrabold tracking-tightest text-slate-950 dark:text-white">
               RECK<span className="text-violet-600">AI</span>
             </span>
           </Link>
@@ -26,7 +26,7 @@ export function Header() {
               <div key={link.href} className="relative group">
                 <Link
                   href={link.href}
-                  className="text-sm font-medium text-neutral-600 hover:text-neutral-950 dark:text-neutral-400 dark:hover:text-white transition-colors py-2"
+                  className="text-sm font-semibold text-slate-600 hover:text-slate-950 dark:text-neutral-400 dark:hover:text-white transition-colors py-2"
                 >
                   {link.label}
                 </Link>

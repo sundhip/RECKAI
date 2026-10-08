@@ -15,23 +15,31 @@ export function OriginalProductCard({ product, featured = false }: OriginalProdu
 
   return (
     <Card
-      className={`group flex flex-col justify-between overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-floating ${
+      className={`group flex flex-col justify-between overflow-hidden transition-all duration-300 hover:-translate-y-1 border border-slate-200/90 bg-white/95 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:border-violet-300 hover:shadow-[0_12px_36px_rgba(99,102,241,0.09)] dark:bg-[#111116] dark:border-neutral-800 dark:hover:border-violet-600/50 ${
         featured ? "border-violet-300/80 dark:border-violet-800/60 shadow-medium" : ""
       }`}
     >
-      {/* Real Project Screenshot Image */}
+      {/* Real Project Screenshot Image with Browser Header */}
       {imageUrl && (
-        <div className="relative aspect-[16/9] w-full overflow-hidden border-b border-neutral-200/80 bg-neutral-950 dark:border-neutral-800">
-          <img
-            src={imageUrl}
-            alt={`${product.name} live application interface`}
-            className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-            loading="lazy"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
-          <span className="absolute bottom-2.5 right-2.5 rounded-md bg-neutral-950/80 backdrop-blur px-2 py-0.5 text-[10px] font-mono text-white border border-neutral-700/60">
-            Live Platform
-          </span>
+        <div className="relative w-full overflow-hidden border-b border-slate-200/80 bg-slate-950 dark:border-neutral-800">
+          <div className="flex items-center justify-between px-3 py-1.5 bg-slate-100/95 dark:bg-neutral-900 border-b border-slate-200/80 dark:border-neutral-800">
+            <div className="flex items-center gap-1">
+              <span className="h-2 w-2 rounded-full bg-[#FF5F56]" />
+              <span className="h-2 w-2 rounded-full bg-[#FFBD2E]" />
+              <span className="h-2 w-2 rounded-full bg-[#27C93F]" />
+            </div>
+            <span className="text-[10px] font-mono text-slate-500 dark:text-neutral-400">
+              {product.slug}.reckai.app
+            </span>
+          </div>
+          <div className="aspect-[16/9] w-full overflow-hidden bg-slate-950">
+            <img
+              src={imageUrl}
+              alt={`${product.name} live application interface`}
+              className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+          </div>
         </div>
       )}
 

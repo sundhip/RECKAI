@@ -28,15 +28,15 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     const variantStyles = {
       primary:
-        "bg-violet-600 text-white hover:bg-violet-700 shadow-sm hover:shadow-violet-glow focus-visible:ring-offset-white dark:focus-visible:ring-offset-reckai-dark",
+        "bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white shadow-[0_4px_18px_rgba(124,58,237,0.3)] hover:shadow-[0_6px_24px_rgba(124,58,237,0.45)] focus-visible:ring-offset-white dark:focus-visible:ring-offset-reckai-dark",
       secondary:
-        "bg-neutral-100 text-neutral-900 hover:bg-neutral-200/80 dark:bg-neutral-800 dark:text-white dark:hover:bg-neutral-700",
+        "bg-slate-100/90 text-slate-900 hover:bg-slate-200/90 border border-slate-200/80 dark:bg-neutral-800 dark:text-white dark:border-neutral-700/80 dark:hover:bg-neutral-700",
       dark:
         "bg-neutral-950 text-white hover:bg-neutral-850 dark:bg-white dark:text-neutral-950 dark:hover:bg-neutral-100 shadow-subtle",
       outline:
-        "border border-neutral-200/90 bg-transparent text-neutral-800 hover:bg-neutral-50 hover:border-neutral-300 dark:border-neutral-700/80 dark:text-neutral-200 dark:hover:bg-neutral-850 dark:hover:border-neutral-600",
+        "border border-slate-300/90 bg-white/80 text-slate-800 hover:bg-slate-50 hover:border-violet-400 shadow-2xs dark:border-neutral-700/80 dark:bg-neutral-900/40 dark:text-neutral-200 dark:hover:bg-neutral-850 dark:hover:border-neutral-600",
       ghost:
-        "bg-transparent text-neutral-600 hover:text-neutral-950 hover:bg-neutral-100/60 dark:text-neutral-400 dark:hover:text-white dark:hover:bg-neutral-800/50",
+        "bg-transparent text-slate-600 hover:text-slate-950 hover:bg-slate-100/80 dark:text-neutral-400 dark:hover:text-white dark:hover:bg-neutral-800/50",
     };
 
     const sizeStyles = {
