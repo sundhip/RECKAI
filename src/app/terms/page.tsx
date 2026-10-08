@@ -95,8 +95,8 @@ export default function TermsPage() {
           </h2>
           <p className="text-neutral-600 dark:text-neutral-400 text-sm">
             For legal notices, contract inquiries, or questions regarding these terms, reach us at{" "}
-            <a href="mailto:contact@reckai.com" className="text-violet-600 dark:text-violet-400 underline font-mono">
-              contact@reckai.com
+            <a href="mailto:contacts@reckai.site" className="text-violet-600 dark:text-violet-400 underline font-mono">
+              contacts@reckai.site
             </a>.
           </p>
         </section>

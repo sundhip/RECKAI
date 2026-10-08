@@ -103,8 +103,8 @@ export default function PrivacyPage() {
           </p>
           <p className="text-sm pt-2">
             To request data deletion, contact us directly at{" "}
-            <a href="mailto:contact@reckai.com" className="text-violet-600 dark:text-violet-400 underline font-mono">
-              contact@reckai.com
+            <a href="mailto:contacts@reckai.site" className="text-violet-600 dark:text-violet-400 underline font-mono">
+              contacts@reckai.site
             </a>.
           </p>
         </section>

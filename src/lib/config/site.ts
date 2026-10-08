@@ -13,8 +13,8 @@ export const siteConfig = {
     linkedin: "https://linkedin.com/company/reckai",
   },
   contact: {
-    email: "contact@reckai.com",
-    inquiries: "projects@reckai.com",
+    email: "contacts@reckai.site",
+    inquiries: "projects@reckai.site",
   },
   keywords: [
     "RECKAI",
