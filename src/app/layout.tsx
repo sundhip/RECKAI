@@ -3,6 +3,8 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { siteConfig } from "@/lib/config/site";
 import { Header } from "@/components/navigation/header";
 import { Footer } from "@/components/navigation/footer";
+import { ThemeProvider } from "@/components/theme/theme-provider";
+import { ThemeScript } from "@/components/theme/theme-script";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -66,11 +68,16 @@ export default function RootLayout({
         },
       }}
     >
-      <html lang="en" className="scroll-smooth">
-        <body className="min-h-screen flex flex-col bg-white text-neutral-900 antialiased dark:bg-reckai-dark dark:text-neutral-100 selection:bg-violet-500 selection:text-white">
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
+      <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+        <head>
+          <ThemeScript />
+        </head>
+        <body className="min-h-screen flex flex-col bg-white text-neutral-900 antialiased dark:bg-reckai-dark dark:text-neutral-100 selection:bg-violet-500 selection:text-white transition-colors duration-200">
+          <ThemeProvider>
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>

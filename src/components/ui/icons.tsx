@@ -18,6 +18,8 @@ import {
   FileText,
   Mail,
   Send,
+  Sun,
+  Moon,
   LucideProps,
 } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
@@ -48,6 +50,8 @@ export const Icons = {
   Document: (props: IconProps) => <FileText strokeWidth={defaultStrokeWidth} size={18} {...props} />,
   Mail: (props: IconProps) => <Mail strokeWidth={defaultStrokeWidth} size={18} {...props} />,
   Send: (props: IconProps) => <Send strokeWidth={defaultStrokeWidth} size={16} {...props} />,
+  Sun: (props: IconProps) => <Sun strokeWidth={defaultStrokeWidth} size={18} {...props} />,
+  Moon: (props: IconProps) => <Moon strokeWidth={defaultStrokeWidth} size={18} {...props} />,
 };
 
 export function IconWrapper({

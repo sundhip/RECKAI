@@ -158,7 +158,7 @@ function OmniXperienceSim() {
                 <div className="flex items-center justify-between p-3 rounded-xl bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-100 dark:border-neutral-800">
                   <div className="flex items-center gap-3">
                     <span className="text-xs font-mono text-neutral-500">08:30 - 09:00</span>
-                    <span className="text-sm font-medium">Cognitive Ramp-Up & Low-Stress Triage</span>
+                    <span className="text-sm font-medium text-neutral-900 dark:text-white">Cognitive Ramp-Up & Low-Stress Triage</span>
                   </div>
                   <Badge variant="default" className="text-[10px]">Autopilot</Badge>
                 </div>
@@ -172,7 +172,7 @@ function OmniXperienceSim() {
                 <div className="flex items-center justify-between p-3 rounded-xl bg-amber-50/40 dark:bg-amber-950/20 border border-amber-100 dark:border-amber-900/30">
                   <div className="flex items-center gap-3">
                     <span className="text-xs font-mono text-amber-600">11:30 - 12:30</span>
-                    <span className="text-sm font-medium">Executive Strategy Review</span>
+                    <span className="text-sm font-medium text-neutral-900 dark:text-white">Executive Strategy Review</span>
                   </div>
                   <Badge variant="outline" className="text-[10px]">Meeting +20m Transit Buffer</Badge>
                 </div>

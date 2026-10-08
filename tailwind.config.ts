@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -12,6 +13,11 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        neutral: {
+          750: "#2B2B30",
+          850: "#1C1C21",
+          925: "#131317",
+        },
         reckai: {
           canvas: "#FFFFFF",
           "canvas-subtle": "#FBFBFD",

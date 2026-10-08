@@ -98,29 +98,29 @@ export function OriginalsPreview({ originals }: { originals: OriginalProduct[] }
                   </div>
 
                   <div className="space-y-3">
-                    <div className="p-3 rounded-xl bg-neutral-50 dark:bg-neutral-850 text-xs space-y-1">
+                    <div className="p-3.5 rounded-xl border border-neutral-200/70 bg-neutral-50/80 dark:border-neutral-800 dark:bg-neutral-850 text-xs space-y-1">
                       <div className="font-semibold text-neutral-900 dark:text-white">
                         Wardrobe Computer Vision
                       </div>
-                      <p className="text-neutral-500">
+                      <p className="text-neutral-600 dark:text-neutral-400">
                         Contextual clothing classification and weather-adaptive styling loops.
                       </p>
                     </div>
 
-                    <div className="p-3 rounded-xl bg-neutral-50 dark:bg-neutral-850 text-xs space-y-1">
+                    <div className="p-3.5 rounded-xl border border-neutral-200/70 bg-neutral-50/80 dark:border-neutral-800 dark:bg-neutral-850 text-xs space-y-1">
                       <div className="font-semibold text-neutral-900 dark:text-white">
                         Circadian Schedule Buffer
                       </div>
-                      <p className="text-neutral-500">
+                      <p className="text-neutral-600 dark:text-neutral-400">
                         Calendar coordination with automated energy conservation zones.
                       </p>
                     </div>
 
-                    <div className="p-3 rounded-xl bg-neutral-50 dark:bg-neutral-850 text-xs space-y-1">
+                    <div className="p-3.5 rounded-xl border border-neutral-200/70 bg-neutral-50/80 dark:border-neutral-800 dark:bg-neutral-850 text-xs space-y-1">
                       <div className="font-semibold text-neutral-900 dark:text-white">
                         Autonomous Liquidity Curve
                       </div>
-                      <p className="text-neutral-500">
+                      <p className="text-neutral-600 dark:text-neutral-400">
                         Predictive pacing engine alerting before discretionary commitments.
                       </p>
                     </div>

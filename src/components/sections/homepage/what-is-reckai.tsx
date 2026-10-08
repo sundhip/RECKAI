@@ -41,10 +41,10 @@ export function WhatIsRECKAI() {
             </CardHeader>
 
             <CardContent className="space-y-6 pt-4 border-t border-neutral-100 dark:border-neutral-850">
-              <div className="rounded-xl bg-neutral-50 p-4 dark:bg-neutral-900/60 text-xs font-mono text-neutral-600 dark:text-neutral-400 space-y-1">
-                <div className="text-[10px] text-violet-600 uppercase font-semibold">Lifecycle</div>
-                <div>Problem Discovery → Deep Reckoning → Design</div>
-                <div>→ Full-Stack Build → Added Intelligence → Shipped IP</div>
+              <div className="rounded-xl border border-neutral-200/80 bg-neutral-50 p-4 dark:border-neutral-800 dark:bg-neutral-900/80 text-xs font-mono text-neutral-700 dark:text-neutral-300 space-y-1">
+                <div className="text-[10px] text-violet-600 dark:text-violet-400 uppercase font-semibold">Lifecycle</div>
+                <div>Problem Discovery → Deep Architecture → Design</div>
+                <div>→ Full-Stack Engineering → Added Intelligence → Shipped IP</div>
               </div>
 
               <Link href="/work/originals" className="inline-block">
@@ -74,10 +74,10 @@ export function WhatIsRECKAI() {
             </CardHeader>
 
             <CardContent className="space-y-6 pt-4 border-t border-neutral-100 dark:border-neutral-850">
-              <div className="rounded-xl bg-neutral-50 p-4 dark:bg-neutral-900/60 text-xs font-mono text-neutral-600 dark:text-neutral-400 space-y-1">
-                <div className="text-[10px] text-neutral-500 uppercase font-semibold">Lifecycle</div>
-                <div>Customer Idea → Technical Reckoning → Strategy</div>
-                <div>→ Engineering → Applied Intelligence → Production Launch</div>
+              <div className="rounded-xl border border-neutral-200/80 bg-neutral-50 p-4 dark:border-neutral-800 dark:bg-neutral-900/80 text-xs font-mono text-neutral-700 dark:text-neutral-300 space-y-1">
+                <div className="text-[10px] text-neutral-600 dark:text-neutral-400 uppercase font-semibold">Lifecycle</div>
+                <div>Partner Vision → Technical Architecture → Design System</div>
+                <div>→ Full-Stack Build → Applied Intelligence → Production Launch</div>
               </div>
 
               <Link href="/start-project" className="inline-block">

@@ -3,6 +3,7 @@ import { MAIN_NAV_LINKS, PRIMARY_CTA } from "@/data/navigation/nav-links";
 import { Container } from "@/components/layout/container";
 import { Button } from "@/components/ui/button";
 import { MobileNavigation } from "@/components/navigation/mobile-nav";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 export function Header() {
   return (
@@ -55,8 +56,10 @@ export function Header() {
           </nav>
         </div>
 
-        {/* Action & Mobile Hamburger */}
-        <div className="flex items-center gap-3">
+        {/* Action & Theme Toggle & Mobile Hamburger */}
+        <div className="flex items-center gap-2 sm:gap-3">
+          <ThemeToggle />
+
           <Link href={PRIMARY_CTA.href} className="hidden sm:inline-flex">
             <Button variant="primary" size="sm" arrow="up-right">
               {PRIMARY_CTA.label}

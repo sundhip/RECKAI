@@ -37,8 +37,8 @@ export function Hero() {
           </SlideUp>
 
           <SlideUp delayMs={300}>
-            <p className="text-lg sm:text-xl lg:text-2xl text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto leading-relaxed font-normal">
-              RECKAI creates and builds intelligent digital products — turning problems, ideas, and opportunities into production-ready software.
+            <p className="text-lg sm:text-xl lg:text-2xl text-neutral-700 dark:text-neutral-300 max-w-3xl mx-auto leading-relaxed font-normal">
+              We design, engineer, and ship intelligent digital products. From solving complex technical challenges in-house to partnering with ambitious founders, we turn ambitious ideas into clean, production-ready software.
             </p>
           </SlideUp>
 
@@ -66,7 +66,21 @@ export function Hero() {
         </div>
 
         {/* Sophisticated Hero Visual: Real RECKAI Product Workstations */}
-        <SlideUp delayMs={500} className="relative max-w-5xl mx-auto">
+        <SlideUp delayMs={500} className="relative max-w-5xl mx-auto space-y-6">
+          {/* Section Heading for Product Runtime Workstation */}
+          <div className="text-center space-y-3">
+            <div className="inline-flex items-center gap-2 rounded-full border border-violet-200/80 bg-violet-50/90 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-violet-700 dark:border-violet-900/60 dark:bg-violet-950/50 dark:text-violet-300">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
+              <span>LIVE INTERACTIVE RUNTIME</span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-neutral-950 dark:text-white">
+              Experience RECKAI Systems in Real Time
+            </h2>
+            <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 max-w-xl mx-auto">
+              Interact with live architectural simulations of our flagship software. Select a product below to inspect real-time decision telemetry.
+            </p>
+          </div>
+
           {/* Workstation Container */}
           <div className="rounded-3xl border border-neutral-200/90 bg-neutral-50/80 p-3 sm:p-5 shadow-floating backdrop-blur-md dark:border-neutral-800 dark:bg-reckai-dark-surface/90">
             {/* Window Chrome Header */}
@@ -221,18 +235,18 @@ export function Hero() {
                       </p>
                     </div>
 
-                    <div className="rounded-xl border border-neutral-200/80 bg-neutral-50/50 p-4 dark:border-neutral-800 dark:bg-neutral-900/40 sm:col-span-2">
-                      <div className="text-[11px] font-mono uppercase tracking-wider text-neutral-500">
+                    <div className="rounded-xl border border-neutral-200/90 bg-neutral-50 p-4 dark:border-neutral-800 dark:bg-neutral-900/60 sm:col-span-2">
+                      <div className="text-[11px] font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
                         Dynamic Generated Daily Quests
                       </div>
-                      <div className="mt-2 space-y-2">
-                        <div className="flex items-center justify-between text-xs p-2 rounded-lg bg-white dark:bg-neutral-850 border border-neutral-200/60 dark:border-neutral-700/60">
-                          <span className="font-medium">1. Deep Code Architecture (90m uninterrupted)</span>
-                          <span className="text-emerald-600 font-mono text-[10px]">Active</span>
+                      <div className="mt-2.5 space-y-2">
+                        <div className="flex items-center justify-between text-xs p-2.5 rounded-lg bg-white text-neutral-900 dark:bg-neutral-800/90 dark:text-neutral-100 border border-neutral-200 dark:border-neutral-700 shadow-sm">
+                          <span className="font-semibold text-neutral-900 dark:text-neutral-100">1. Deep Code Architecture (90m uninterrupted)</span>
+                          <span className="text-emerald-700 dark:text-emerald-400 font-mono text-[10px] font-bold bg-emerald-100/80 dark:bg-emerald-950/80 px-2 py-0.5 rounded">Active</span>
                         </div>
-                        <div className="flex items-center justify-between text-xs p-2 rounded-lg bg-white dark:bg-neutral-850 border border-neutral-200/60 dark:border-neutral-700/60">
-                          <span className="font-medium">2. Evening Digital Detox Protocol (0 screens after 9pm)</span>
-                          <span className="text-neutral-400 font-mono text-[10px]">Scheduled</span>
+                        <div className="flex items-center justify-between text-xs p-2.5 rounded-lg bg-white text-neutral-900 dark:bg-neutral-800/90 dark:text-neutral-100 border border-neutral-200 dark:border-neutral-700 shadow-sm">
+                          <span className="font-semibold text-neutral-900 dark:text-neutral-100">2. Evening Digital Detox Protocol (0 screens after 9pm)</span>
+                          <span className="text-neutral-600 dark:text-neutral-400 font-mono text-[10px] font-medium bg-neutral-100 dark:bg-neutral-700/60 px-2 py-0.5 rounded">Scheduled</span>
                         </div>
                       </div>
                     </div>

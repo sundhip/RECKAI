@@ -112,11 +112,11 @@ export function BuildsPreview() {
                     Domain Reasoning & Schema Modeling
                   </div>
                   <div className="flex flex-wrap gap-1.5 mt-2">
-                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-white dark:bg-neutral-800 border border-violet-200/60 dark:border-violet-800/50">
+                    <span className="text-[10px] font-mono text-neutral-900 dark:text-neutral-200 px-2 py-0.5 rounded bg-white dark:bg-neutral-800 border border-violet-200/60 dark:border-violet-800/50">
                       PostgreSQL Relational Graph
                     </span>
-                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-white dark:bg-neutral-800 border border-violet-200/60 dark:border-violet-800/50">
-                      Multi-Step Reasoning LLM Pipeline
+                    <span className="text-[10px] font-mono text-neutral-900 dark:text-neutral-200 px-2 py-0.5 rounded bg-white dark:bg-neutral-800 border border-violet-200/60 dark:border-violet-800/50">
+                      Multi-Step Reasoning Pipeline
                     </span>
                   </div>
                 </div>
