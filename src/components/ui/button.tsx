@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils/cn";
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary" | "outline" | "ghost" | "dark";
-  size?: "sm" | "md" | "lg";
+  size?: "sm" | "md" | "lg" | "xl";
   isLoading?: boolean;
   arrow?: "none" | "right" | "up-right";
 }
@@ -40,9 +40,10 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     };
 
     const sizeStyles = {
-      sm: "h-9 px-4 text-xs tracking-wide gap-1.5",
-      md: "h-11 px-5 text-sm tracking-wide gap-2",
-      lg: "h-13 px-7 text-base tracking-wide gap-2.5",
+      sm: "h-9 px-4 text-xs tracking-wide gap-1.5 font-medium",
+      md: "h-11 px-5 text-sm tracking-wide gap-2 font-medium",
+      lg: "h-14 px-8 text-base tracking-wide gap-2.5 font-semibold",
+      xl: "h-16 px-10 text-lg tracking-wide gap-3 font-semibold",
     };
 
     return (

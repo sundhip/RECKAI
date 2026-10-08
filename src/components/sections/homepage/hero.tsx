@@ -173,12 +173,12 @@ export function Hero() {
           </SlideUp>
 
           <SlideUp delayMs={400}>
-            <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+            <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-5 pt-3">
               <Link
                 href="/start-project"
                 onClick={() => trackEvent("hero_start_project_click")}
               >
-                <Button variant="primary" size="lg" arrow="up-right">
+                <Button variant="primary" size="xl" arrow="up-right">
                   Start a Project
                 </Button>
               </Link>
@@ -187,7 +187,7 @@ export function Hero() {
                 href="/work"
                 onClick={() => trackEvent("hero_explore_work_click")}
               >
-                <Button variant="outline" size="lg" arrow="right">
+                <Button variant="outline" size="xl" arrow="right">
                   Explore All Products
                 </Button>
               </Link>
